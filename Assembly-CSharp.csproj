@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Game\Scripts\ControladorPersonaje.cs" />
+     <Compile Include="Assets\Game\Scripts\Follow_Character.cs" />
      <Compile Include="Assets\Game\Scripts\Scroll.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
