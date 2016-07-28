@@ -15,8 +15,9 @@ public class ControladorPersonaje : MonoBehaviour {
 	
 	}
 
-	void fixedUpdate(){
-		isGrounded = Physics2D.OverlapCircle (groundChecker.position, radiusChecker, floorMask);
+	void FixedUpdate(){
+		Collider[] hitColliders = Physics.OverlapSphere (groundChecker.position, radiusChecker, floorMask);
+		isGrounded = (hitColliders.Length > 0);
 	}
 	
 	// Update is called once per frame
