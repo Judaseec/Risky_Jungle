@@ -8,15 +8,26 @@ public class Scroll : MonoBehaviour {
 	 */
 	public float depth = 0f;
 	public Rigidbody Character_rigibody;
+	private float time = 0;
+	private bool moving = false;
 	//private Renderer renderer = GetComponent<Renderer>();
 
 	// Use this for initialization
 	void Start () {
-	
+		NotificationCenter.DefaultCenter ().AddObserver (this, "Character_is_running");
+	}
+
+	void Character_is_running(){
+		moving = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		GetComponent<Renderer>().material.mainTextureOffset = new Vector2 (Time.time * Character_rigibody.velocity.x * depth, 0);
+		if (Character_rigibody.velocity.x < 0){
+			time = Time.time;
+		}
+		if (moving) {
+			GetComponent<Renderer> ().material.mainTextureOffset = new Vector2 ((Time.time) * Character_rigibody.velocity.x * depth, 0);
+		}
 	}
 }

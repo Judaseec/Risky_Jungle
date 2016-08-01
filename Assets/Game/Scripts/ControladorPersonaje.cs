@@ -47,6 +47,7 @@ public class ControladorPersonaje : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.RightArrow)) {
 			run = true;
+			NotificationCenter.DefaultCenter().PostNotification(this, "Character_is_running");
 		} else {
 			run = false;
 		}
