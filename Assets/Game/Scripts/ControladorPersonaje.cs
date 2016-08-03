@@ -12,7 +12,12 @@ public class ControladorPersonaje : MonoBehaviour {
 
 	private Animator animator;
 	public bool run = false;
+	public bool runBack = false;
 	public float velocity = 1f;
+	public bool turned = false;
+
+	public float xCamInit = 0f;
+	public float xCharacter =0f;
 
 	void Awake() {
 		animator = GetComponent<Animator>();
@@ -34,19 +39,33 @@ public class ControladorPersonaje : MonoBehaviour {
 
 		if (run) {
 			GetComponent<Rigidbody>().velocity = new Vector3(velocity, GetComponent<Rigidbody>().velocity.y, GetComponent<Rigidbody>().velocity.z);
+			if(xCamInit <= (xCharacter + 3f)){
+				GameObject.Find ("Camera").GetComponent<Follow_Character>().enabled = true;
+			}
+		}
 
+		if (runBack) {
+			GetComponent<Rigidbody>().velocity = new Vector3(-velocity, GetComponent<Rigidbody>().velocity.y, GetComponent<Rigidbody>().velocity.z);
+			GameObject cam = GameObject.Find ("Camera");
+			xCamInit = cam.transform.position.x;
+			cam.GetComponent<Follow_Character>().enabled = false;
 		}
 		animator.SetFloat ("velX", GetComponent<Rigidbody>().velocity.x);
 
-		if(isGrounded && !run){
+		if(isGrounded && !run && !runBack){
 			GetComponent<Animator> ().Play("idle");
 		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		xCharacter = transform.position.x;
+
 		if (isGrounded && Input.GetKeyDown(KeyCode.UpArrow)) {
 			GetComponent<Rigidbody>().AddForce(new Vector2(0, jumpForce));
+		}
+
+		if (!isGrounded) {
 			GetComponent<Animator> ().Play("jump");
 		}
 
@@ -58,6 +77,26 @@ public class ControladorPersonaje : MonoBehaviour {
 			run = false;
 		}
 
+		if (Input.GetKey (KeyCode.LeftArrow) && isGrounded) {
+			runBack = true;
+			NotificationCenter.DefaultCenter ().PostNotification (this, "Character_is_running_back");
+			GetComponent<Animator> ().Play ("run");
+		} else {
+			runBack = false;
+		}
 
+		if(Input.GetKeyDown (KeyCode.LeftArrow) && !turned){
+			turnCharacter();
+			turned = true;
+		}
+
+		if(Input.GetKeyDown (KeyCode.RightArrow) && turned){
+			turnCharacter();
+			turned = false;
+		}
+	}
+
+	void turnCharacter(){
+		GetComponent<Transform> ().Rotate(0,180,0,Space.World);
 	}
 }

@@ -5,10 +5,11 @@ public class Follow_Character : MonoBehaviour {
 
 	public Transform character;
 	public float separate = 3f;
+	public bool back = false;
 
 	// Use this for initialization
 	void Start () {
-	
+		
 	}
 	
 	// Update is called once per frame
