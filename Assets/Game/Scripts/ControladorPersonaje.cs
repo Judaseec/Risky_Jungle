@@ -5,7 +5,7 @@ public class ControladorPersonaje : MonoBehaviour {
 
 	public float jumpForce = 1500f;
 
-	private bool isGrounded = true;
+	public bool isGrounded = true;
 	public Transform groundChecker;
 	private float radiusChecker = 0.03f;
 	public LayerMask floorMask;
@@ -37,6 +37,10 @@ public class ControladorPersonaje : MonoBehaviour {
 
 		}
 		animator.SetFloat ("velX", GetComponent<Rigidbody>().velocity.x);
+
+		if(isGrounded && !run){
+			GetComponent<Animator> ().Play("idle");
+		}
 	}
 	
 	// Update is called once per frame
@@ -46,11 +50,14 @@ public class ControladorPersonaje : MonoBehaviour {
 			GetComponent<Animator> ().Play("jump");
 		}
 
-		if (Input.GetKey (KeyCode.RightArrow)) {
+		if (Input.GetKey (KeyCode.RightArrow) && isGrounded) {
 			run = true;
 			NotificationCenter.DefaultCenter().PostNotification(this, "Character_is_running");
+			GetComponent<Animator> ().Play("run");
 		} else {
 			run = false;
 		}
+
+
 	}
 }
