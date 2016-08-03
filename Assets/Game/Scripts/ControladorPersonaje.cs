@@ -16,6 +16,7 @@ public class ControladorPersonaje : MonoBehaviour {
 
 	void Awake() {
 		animator = GetComponent<Animator>();
+		Debug.Log (animator);
 	}
 
 	// Use this for initialization
