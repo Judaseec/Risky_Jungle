@@ -37,11 +37,12 @@ public class ControladorPersonaje : MonoBehaviour {
 		isGrounded = (hitColliders.Length > 0);
 		//animator.SetBool ("isGrounded", isGrounded);
 
+		if(xCamInit <= (xCharacter + 3f) && !runBack){
+			GameObject.Find ("Camera").GetComponent<Follow_Character>().enabled = true;
+		}
+
 		if (run) {
 			GetComponent<Rigidbody>().velocity = new Vector3(velocity, GetComponent<Rigidbody>().velocity.y, GetComponent<Rigidbody>().velocity.z);
-			if(xCamInit <= (xCharacter + 3f)){
-				GameObject.Find ("Camera").GetComponent<Follow_Character>().enabled = true;
-			}
 		}
 
 		if (runBack) {

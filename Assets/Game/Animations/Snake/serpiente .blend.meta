@@ -66,7 +66,297 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: -1
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_serpiente
+        weight: 1
+      - path: arm_serpiente/espina_9
+        weight: 1
+      - path: arm_serpiente/espina_9/boca_1
+        weight: 1
+      - path: arm_serpiente/espina_9/boca_2
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3/espina_2
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3/espina_2/espina_1
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3/espina_2/espina_1/base
+        weight: 1
+      - path: dientes_serp
+        weight: 1
+      - path: serpiente
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ataque
+      takeName: ataque
+      firstFrame: -1
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_serpiente
+        weight: 1
+      - path: arm_serpiente/espina_9
+        weight: 1
+      - path: arm_serpiente/espina_9/boca_1
+        weight: 1
+      - path: arm_serpiente/espina_9/boca_2
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3/espina_2
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3/espina_2/espina_1
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3/espina_2/espina_1/base
+        weight: 1
+      - path: dientes_serp
+        weight: 1
+      - path: serpiente
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: idle
+      takeName: idle
+      firstFrame: -1
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_serpiente
+        weight: 1
+      - path: arm_serpiente/espina_9
+        weight: 1
+      - path: arm_serpiente/espina_9/boca_1
+        weight: 1
+      - path: arm_serpiente/espina_9/boca_2
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3/espina_2
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3/espina_2/espina_1
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3/espina_2/espina_1/base
+        weight: 1
+      - path: dientes_serp
+        weight: 1
+      - path: serpiente
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: morir
+      takeName: morir
+      firstFrame: -1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_serpiente
+        weight: 1
+      - path: arm_serpiente/espina_9
+        weight: 1
+      - path: arm_serpiente/espina_9/boca_1
+        weight: 1
+      - path: arm_serpiente/espina_9/boca_2
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3/espina_2
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3/espina_2/espina_1
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3/espina_2/espina_1/base
+        weight: 1
+      - path: dientes_serp
+        weight: 1
+      - path: serpiente
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: reset
+      takeName: reset
+      firstFrame: -1
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_serpiente
+        weight: 1
+      - path: arm_serpiente/espina_9
+        weight: 1
+      - path: arm_serpiente/espina_9/boca_1
+        weight: 1
+      - path: arm_serpiente/espina_9/boca_2
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3/espina_2
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3/espina_2/espina_1
+        weight: 1
+      - path: arm_serpiente/espina_9/espina_8/espina_7/espina_6/espina_5/espina_4/espina_3/espina_2/espina_1/base
+        weight: 1
+      - path: dientes_serp
+        weight: 1
+      - path: serpiente
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []

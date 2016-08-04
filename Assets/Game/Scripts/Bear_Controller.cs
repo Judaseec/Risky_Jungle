@@ -14,7 +14,7 @@ public class Bear_Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Debug.Log (GameObject.Find("trigger").GetComponent<Trigger_Controller>().inside);
-		if (GameObject.Find("trigger").GetComponent<Trigger_Controller>().inside && !dead) {
+		if (GameObject.Find("Bear_Trigger").GetComponent<Trigger_Controller>().inside && !dead) {
 			GetComponent<Animator> ().Play("atacar");
 		}
 

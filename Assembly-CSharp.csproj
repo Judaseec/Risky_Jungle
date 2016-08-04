@@ -48,9 +48,11 @@
   <ItemGroup>
      <Compile Include="Assets\Game\Scripts\Bear_Controller.cs" />
      <Compile Include="Assets\Game\Scripts\ControladorPersonaje.cs" />
+     <Compile Include="Assets\Game\Scripts\Crocodile_Controller.cs" />
      <Compile Include="Assets\Game\Scripts\Follow_Character.cs" />
      <Compile Include="Assets\Game\Scripts\NotificationCenter.cs" />
      <Compile Include="Assets\Game\Scripts\Scroll.cs" />
+     <Compile Include="Assets\Game\Scripts\Snake_Controller.cs" />
      <Compile Include="Assets\Game\Scripts\Trigger_Controller.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
