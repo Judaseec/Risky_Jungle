@@ -127,7 +127,587 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: -1
+      lastFrame: 69
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_coco
+        weight: 1
+      - path: arm_coco/base
+        weight: 1
+      - path: arm_coco/base/cintura
+        weight: 1
+      - path: arm_coco/base/cintura/cd
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001/cola1_003
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001/cola1_003/cola1_002
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001/cola1_003/cola1_002/cola1_004
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_l
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_l/canilla_l
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_r
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_r/canilla_r
+        weight: 1
+      - path: arm_coco/base/cintura/cd/rodilla_l
+        weight: 1
+      - path: arm_coco/base/cintura/cd/rodilla_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_l
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_l/antebrazo_l
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_r/antebrazo_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/codo_l
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/codo_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/mandibulaInferior
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/mandibulaSuperior1
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/mandibulaSuperior1/mandibulaSuperior2
+        weight: 1
+      - path: arm_coco/base/controlMano_l
+        weight: 1
+      - path: arm_coco/base/controlMano_l/mano_l
+        weight: 1
+      - path: arm_coco/base/controlMano_l/mano_l/talonMano_l
+        weight: 1
+      - path: arm_coco/base/controlMano_r
+        weight: 1
+      - path: arm_coco/base/controlMano_r/mano_r
+        weight: 1
+      - path: arm_coco/base/controlMano_r/mano_r/talonMano_r
+        weight: 1
+      - path: arm_coco/base/controlPie_l
+        weight: 1
+      - path: arm_coco/base/controlPie_l/pie_l
+        weight: 1
+      - path: arm_coco/base/controlPie_l/pie_l/talonpie_l
+        weight: 1
+      - path: arm_coco/base/controlPie_r
+        weight: 1
+      - path: arm_coco/base/controlPie_r/pie_r
+        weight: 1
+      - path: arm_coco/base/controlPie_r/pie_r/talonpie_r
+        weight: 1
+      - path: cocodrilo
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: dientes_coco
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ataque
+      takeName: ataque
+      firstFrame: -1
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_coco
+        weight: 1
+      - path: arm_coco/base
+        weight: 1
+      - path: arm_coco/base/cintura
+        weight: 1
+      - path: arm_coco/base/cintura/cd
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001/cola1_003
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001/cola1_003/cola1_002
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001/cola1_003/cola1_002/cola1_004
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_l
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_l/canilla_l
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_r
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_r/canilla_r
+        weight: 1
+      - path: arm_coco/base/cintura/cd/rodilla_l
+        weight: 1
+      - path: arm_coco/base/cintura/cd/rodilla_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_l
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_l/antebrazo_l
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_r/antebrazo_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/codo_l
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/codo_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/mandibulaInferior
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/mandibulaSuperior1
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/mandibulaSuperior1/mandibulaSuperior2
+        weight: 1
+      - path: arm_coco/base/controlMano_l
+        weight: 1
+      - path: arm_coco/base/controlMano_l/mano_l
+        weight: 1
+      - path: arm_coco/base/controlMano_l/mano_l/talonMano_l
+        weight: 1
+      - path: arm_coco/base/controlMano_r
+        weight: 1
+      - path: arm_coco/base/controlMano_r/mano_r
+        weight: 1
+      - path: arm_coco/base/controlMano_r/mano_r/talonMano_r
+        weight: 1
+      - path: arm_coco/base/controlPie_l
+        weight: 1
+      - path: arm_coco/base/controlPie_l/pie_l
+        weight: 1
+      - path: arm_coco/base/controlPie_l/pie_l/talonpie_l
+        weight: 1
+      - path: arm_coco/base/controlPie_r
+        weight: 1
+      - path: arm_coco/base/controlPie_r/pie_r
+        weight: 1
+      - path: arm_coco/base/controlPie_r/pie_r/talonpie_r
+        weight: 1
+      - path: cocodrilo
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: dientes_coco
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: idle
+      takeName: idle
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_coco
+        weight: 1
+      - path: arm_coco/base
+        weight: 1
+      - path: arm_coco/base/cintura
+        weight: 1
+      - path: arm_coco/base/cintura/cd
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001/cola1_003
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001/cola1_003/cola1_002
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001/cola1_003/cola1_002/cola1_004
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_l
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_l/canilla_l
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_r
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_r/canilla_r
+        weight: 1
+      - path: arm_coco/base/cintura/cd/rodilla_l
+        weight: 1
+      - path: arm_coco/base/cintura/cd/rodilla_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_l
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_l/antebrazo_l
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_r/antebrazo_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/codo_l
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/codo_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/mandibulaInferior
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/mandibulaSuperior1
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/mandibulaSuperior1/mandibulaSuperior2
+        weight: 1
+      - path: arm_coco/base/controlMano_l
+        weight: 1
+      - path: arm_coco/base/controlMano_l/mano_l
+        weight: 1
+      - path: arm_coco/base/controlMano_l/mano_l/talonMano_l
+        weight: 1
+      - path: arm_coco/base/controlMano_r
+        weight: 1
+      - path: arm_coco/base/controlMano_r/mano_r
+        weight: 1
+      - path: arm_coco/base/controlMano_r/mano_r/talonMano_r
+        weight: 1
+      - path: arm_coco/base/controlPie_l
+        weight: 1
+      - path: arm_coco/base/controlPie_l/pie_l
+        weight: 1
+      - path: arm_coco/base/controlPie_l/pie_l/talonpie_l
+        weight: 1
+      - path: arm_coco/base/controlPie_r
+        weight: 1
+      - path: arm_coco/base/controlPie_r/pie_r
+        weight: 1
+      - path: arm_coco/base/controlPie_r/pie_r/talonpie_r
+        weight: 1
+      - path: cocodrilo
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: dientes_coco
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: muerte
+      takeName: muerte
+      firstFrame: -1
+      lastFrame: 69
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_coco
+        weight: 1
+      - path: arm_coco/base
+        weight: 1
+      - path: arm_coco/base/cintura
+        weight: 1
+      - path: arm_coco/base/cintura/cd
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001/cola1_003
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001/cola1_003/cola1_002
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001/cola1_003/cola1_002/cola1_004
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_l
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_l/canilla_l
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_r
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_r/canilla_r
+        weight: 1
+      - path: arm_coco/base/cintura/cd/rodilla_l
+        weight: 1
+      - path: arm_coco/base/cintura/cd/rodilla_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_l
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_l/antebrazo_l
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_r/antebrazo_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/codo_l
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/codo_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/mandibulaInferior
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/mandibulaSuperior1
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/mandibulaSuperior1/mandibulaSuperior2
+        weight: 1
+      - path: arm_coco/base/controlMano_l
+        weight: 1
+      - path: arm_coco/base/controlMano_l/mano_l
+        weight: 1
+      - path: arm_coco/base/controlMano_l/mano_l/talonMano_l
+        weight: 1
+      - path: arm_coco/base/controlMano_r
+        weight: 1
+      - path: arm_coco/base/controlMano_r/mano_r
+        weight: 1
+      - path: arm_coco/base/controlMano_r/mano_r/talonMano_r
+        weight: 1
+      - path: arm_coco/base/controlPie_l
+        weight: 1
+      - path: arm_coco/base/controlPie_l/pie_l
+        weight: 1
+      - path: arm_coco/base/controlPie_l/pie_l/talonpie_l
+        weight: 1
+      - path: arm_coco/base/controlPie_r
+        weight: 1
+      - path: arm_coco/base/controlPie_r/pie_r
+        weight: 1
+      - path: arm_coco/base/controlPie_r/pie_r/talonpie_r
+        weight: 1
+      - path: cocodrilo
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: dientes_coco
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: reset
+      takeName: reset
+      firstFrame: -1
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_coco
+        weight: 1
+      - path: arm_coco/base
+        weight: 1
+      - path: arm_coco/base/cintura
+        weight: 1
+      - path: arm_coco/base/cintura/cd
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001/cola1_003
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001/cola1_003/cola1_002
+        weight: 1
+      - path: arm_coco/base/cintura/cd/cola1/cola1_001/cola1_003/cola1_002/cola1_004
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_l
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_l/canilla_l
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_r
+        weight: 1
+      - path: arm_coco/base/cintura/cd/muslo2_r/canilla_r
+        weight: 1
+      - path: arm_coco/base/cintura/cd/rodilla_l
+        weight: 1
+      - path: arm_coco/base/cintura/cd/rodilla_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_l
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_l/antebrazo_l
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/brazo_r/antebrazo_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/codo_l
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/codo_r
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/mandibulaInferior
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/mandibulaSuperior1
+        weight: 1
+      - path: arm_coco/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/mandibulaSuperior1/mandibulaSuperior2
+        weight: 1
+      - path: arm_coco/base/controlMano_l
+        weight: 1
+      - path: arm_coco/base/controlMano_l/mano_l
+        weight: 1
+      - path: arm_coco/base/controlMano_l/mano_l/talonMano_l
+        weight: 1
+      - path: arm_coco/base/controlMano_r
+        weight: 1
+      - path: arm_coco/base/controlMano_r/mano_r
+        weight: 1
+      - path: arm_coco/base/controlMano_r/mano_r/talonMano_r
+        weight: 1
+      - path: arm_coco/base/controlPie_l
+        weight: 1
+      - path: arm_coco/base/controlPie_l/pie_l
+        weight: 1
+      - path: arm_coco/base/controlPie_l/pie_l/talonpie_l
+        weight: 1
+      - path: arm_coco/base/controlPie_r
+        weight: 1
+      - path: arm_coco/base/controlPie_r/pie_r
+        weight: 1
+      - path: arm_coco/base/controlPie_r/pie_r/talonpie_r
+        weight: 1
+      - path: cocodrilo
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: dientes_coco
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
