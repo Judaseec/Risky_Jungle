@@ -15,8 +15,10 @@ public class Crocodile_Controller : MonoBehaviour {
 		if (GameObject.Find("Crocodile_Trigger").GetComponent<Trigger_Controller>().inside && !sleep) {
 			GetComponent<Animator> ().Play("ataque");
 		}
-
-		if (sleep) {
+		else if(!GameObject.Find("Crocodile_Trigger").GetComponent<Trigger_Controller>().inside && !sleep){
+			GetComponent<Animator> ().Play("idle");
+		}
+		else if (sleep) {
 			GetComponent<Animator> ().Play("muerte");
 		}
 	}

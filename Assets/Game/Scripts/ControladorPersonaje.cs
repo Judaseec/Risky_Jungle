@@ -80,7 +80,7 @@ public class ControladorPersonaje : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.LeftArrow) && isGrounded) {
 			runBack = true;
-			NotificationCenter.DefaultCenter ().PostNotification (this, "Character_is_running_back");
+			//NotificationCenter.DefaultCenter ().PostNotification (this, "Character_is_running_back");
 			GetComponent<Animator> ().Play ("run");
 		} else {
 			runBack = false;

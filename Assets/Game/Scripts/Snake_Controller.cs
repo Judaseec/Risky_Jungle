@@ -15,8 +15,10 @@ public class Snake_Controller : MonoBehaviour {
 		if (GameObject.Find("Snake_Trigger").GetComponent<Trigger_Controller>().inside && !dead) {
 			GetComponent<Animator> ().Play("ataque");
 		}
-
-		if (dead) {
+		else if (!GameObject.Find("Snake_Trigger").GetComponent<Trigger_Controller>().inside && !dead){
+			GetComponent<Animator> ().Play("idle");
+		}
+		else if (dead) {
 			GetComponent<Animator> ().Play("morir");
 		}
 	}

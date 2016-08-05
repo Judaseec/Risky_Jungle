@@ -17,8 +17,10 @@ public class Bear_Controller : MonoBehaviour {
 		if (GameObject.Find("Bear_Trigger").GetComponent<Trigger_Controller>().inside && !dead) {
 			GetComponent<Animator> ().Play("atacar");
 		}
-
-		if (dead) {
+		else if(!GameObject.Find("Bear_Trigger").GetComponent<Trigger_Controller>().inside && !dead){
+			GetComponent<Animator> ().Play("idle");
+		}
+		else if (dead) {
 			GetComponent<Animator> ().Play("morir");
 		}
 	}
