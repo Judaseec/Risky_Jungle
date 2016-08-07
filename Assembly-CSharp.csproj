@@ -54,6 +54,7 @@
      <Compile Include="Assets\Game\Scripts\Scroll.cs" />
      <Compile Include="Assets\Game\Scripts\Snake_Controller.cs" />
      <Compile Include="Assets\Game\Scripts\Trigger_Controller.cs" />
+     <Compile Include="Assets\Game\Scripts\Water_Controller.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
