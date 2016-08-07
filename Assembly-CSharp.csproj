@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Game\Scripts\Bear_Controller.cs" />
-     <Compile Include="Assets\Game\Scripts\ControladorPersonaje.cs" />
+     <Compile Include="Assets\Game\Scripts\Character_Controller.cs" />
      <Compile Include="Assets\Game\Scripts\Crocodile_Controller.cs" />
      <Compile Include="Assets\Game\Scripts\Follow_Character.cs" />
      <Compile Include="Assets\Game\Scripts\NotificationCenter.cs" />

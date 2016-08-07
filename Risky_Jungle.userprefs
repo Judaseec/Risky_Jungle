@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Scripts\Water_Controller.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Scripts\Bear_Controller.cs">
     <Files>
-      <File FileName="Assets\Game\Scripts\Trigger_Controller.cs" Line="21" Column="16" />
+      <File FileName="Assets\Game\Scripts\Character_Controller.cs" Line="60" Column="31" />
+      <File FileName="Assets\Game\Scripts\Trigger_Controller.cs" Line="32" Column="1" />
       <File FileName="Assets\Game\Scripts\Water_Controller.cs" Line="32" Column="6" />
-      <File FileName="Assets\Game\Scripts\ControladorPersonaje.cs" Line="41" Column="60" />
-      <File FileName="Assets\Game\Scripts\Bear_Controller.cs" Line="17" Column="3" />
+      <File FileName="Assets\Game\Scripts\Bear_Controller.cs" Line="17" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

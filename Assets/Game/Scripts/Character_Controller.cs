@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ControladorPersonaje : MonoBehaviour {
+public class Character_Controller : MonoBehaviour {
 
 	public float jumpForce = 1500f;
 
@@ -15,9 +15,12 @@ public class ControladorPersonaje : MonoBehaviour {
 	public bool runBack = false;
 	public float velocity = 1f;
 	public bool turned = false;
+	public bool down = false;
 
 	public float xCamInit = 0f;
 	public float xCharacter =0f;
+
+	private float interval = -5.0f;
 
 	void Awake() {
 		animator = GetComponent<Animator>();
@@ -53,7 +56,7 @@ public class ControladorPersonaje : MonoBehaviour {
 		}
 		animator.SetFloat ("velX", GetComponent<Rigidbody>().velocity.x);
 
-		if(isGrounded && !run && !runBack){
+		if(isGrounded && !run && !runBack && !down && ((Time.time - interval) > 1)){
 			GetComponent<Animator> ().Play("idle");
 		}
 	}
@@ -62,8 +65,11 @@ public class ControladorPersonaje : MonoBehaviour {
 	void Update () {
 		xCharacter = transform.position.x;
 
-		if (isGrounded && Input.GetKeyDown(KeyCode.UpArrow)) {
-			GetComponent<Rigidbody>().AddForce(new Vector2(0, jumpForce));
+		if (isGrounded && Input.GetKeyDown (KeyCode.UpArrow) && !down) {
+			GetComponent<Rigidbody> ().AddForce (new Vector2 (0, jumpForce));
+		} else if (isGrounded && Input.GetKeyDown (KeyCode.UpArrow) && down) {
+			GetComponent<Animator> ().Play("agachado");
+			down = false;
 		}
 
 		if (!isGrounded) {
@@ -72,6 +78,7 @@ public class ControladorPersonaje : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.RightArrow) && isGrounded) {
 			run = true;
+			down = false;
 			NotificationCenter.DefaultCenter().PostNotification(this, "Character_is_running");
 			GetComponent<Animator> ().Play("run");
 		} else {
@@ -80,10 +87,16 @@ public class ControladorPersonaje : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.LeftArrow) && isGrounded) {
 			runBack = true;
+			down = false;
 			//NotificationCenter.DefaultCenter ().PostNotification (this, "Character_is_running_back");
 			GetComponent<Animator> ().Play ("run");
 		} else {
 			runBack = false;
+		}
+
+		if(Input.GetKeyDown(KeyCode.DownArrow) && isGrounded){
+			down = true;
+			GetComponent<Animator> ().Play("agachado");
 		}
 
 		if(Input.GetKeyDown (KeyCode.LeftArrow) && !turned){
@@ -94,6 +107,16 @@ public class ControladorPersonaje : MonoBehaviour {
 		if(Input.GetKeyDown (KeyCode.RightArrow) && turned){
 			turnCharacter();
 			turned = false;
+		}
+
+		if(Input.GetKeyDown (KeyCode.Q)){
+			if(down){
+				GetComponent<Animator>().Play("disparo_agachado");
+			}
+			else{
+				GetComponent<Animator>().Play("ataque_cerbatana");
+				interval = Time.time;
+			}
 		}
 	}
 
