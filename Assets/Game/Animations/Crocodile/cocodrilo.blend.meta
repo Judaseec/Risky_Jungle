@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 465062382a787604c9142bf9cb34f89f
-timeCreated: 1470285668
+timeCreated: 1471284959
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -29,27 +29,26 @@ ModelImporter:
     100042: controlMano_r
     100044: controlPie_l
     100046: controlPie_r
-    100048: Cube
-    100050: cuello
-    100052: dientes_coco
-    100054: espalda1
-    100056: espalda2
-    100058: espalda3
-    100060: mandibulaInferior
-    100062: mandibulaSuperior1
-    100064: mandibulaSuperior2
-    100066: mano_l
-    100068: mano_r
-    100070: muslo2_l
-    100072: muslo2_r
-    100074: pie_l
-    100076: pie_r
-    100078: rodilla_l
-    100080: rodilla_r
-    100082: talonMano_l
-    100084: talonMano_r
-    100086: talonpie_l
-    100088: talonpie_r
+    100048: cuello
+    100050: dientes_coco
+    100052: espalda1
+    100054: espalda2
+    100056: espalda3
+    100058: mandibulaInferior
+    100060: mandibulaSuperior1
+    100062: mandibulaSuperior2
+    100064: mano_l
+    100066: mano_r
+    100068: muslo2_l
+    100070: muslo2_r
+    100072: pie_l
+    100074: pie_r
+    100076: rodilla_l
+    100078: rodilla_r
+    100080: talonMano_l
+    100082: talonMano_r
+    100084: talonpie_l
+    100086: talonpie_r
     400000: antebrazo_l
     400002: antebrazo_r
     400004: arm_coco
@@ -74,32 +73,28 @@ ModelImporter:
     400042: controlMano_r
     400044: controlPie_l
     400046: controlPie_r
-    400048: Cube
-    400050: cuello
-    400052: dientes_coco
-    400054: espalda1
-    400056: espalda2
-    400058: espalda3
-    400060: mandibulaInferior
-    400062: mandibulaSuperior1
-    400064: mandibulaSuperior2
-    400066: mano_l
-    400068: mano_r
-    400070: muslo2_l
-    400072: muslo2_r
-    400074: pie_l
-    400076: pie_r
-    400078: rodilla_l
-    400080: rodilla_r
-    400082: talonMano_l
-    400084: talonMano_r
-    400086: talonpie_l
-    400088: talonpie_r
-    2300000: Cube
-    3300000: Cube
-    4300000: Cube
-    4300002: dientes_coco
-    4300004: cocodrilo
+    400048: cuello
+    400050: dientes_coco
+    400052: espalda1
+    400054: espalda2
+    400056: espalda3
+    400058: mandibulaInferior
+    400060: mandibulaSuperior1
+    400062: mandibulaSuperior2
+    400064: mano_l
+    400066: mano_r
+    400068: muslo2_l
+    400070: muslo2_r
+    400072: pie_l
+    400074: pie_r
+    400076: rodilla_l
+    400078: rodilla_r
+    400080: talonMano_l
+    400082: talonMano_r
+    400084: talonpie_l
+    400086: talonpie_r
+    4300000: dientes_coco
+    4300002: cocodrilo
     7400000: Default Take
     7400002: ataque
     7400004: idle
@@ -238,8 +233,6 @@ ModelImporter:
         weight: 1
       - path: cocodrilo
         weight: 1
-      - path: Cube
-        weight: 1
       - path: dientes_coco
         weight: 1
       maskType: 0
@@ -353,8 +346,6 @@ ModelImporter:
       - path: arm_coco/base/controlPie_r/pie_r/talonpie_r
         weight: 1
       - path: cocodrilo
-        weight: 1
-      - path: Cube
         weight: 1
       - path: dientes_coco
         weight: 1
@@ -470,8 +461,6 @@ ModelImporter:
         weight: 1
       - path: cocodrilo
         weight: 1
-      - path: Cube
-        weight: 1
       - path: dientes_coco
         weight: 1
       maskType: 0
@@ -585,8 +574,6 @@ ModelImporter:
       - path: arm_coco/base/controlPie_r/pie_r/talonpie_r
         weight: 1
       - path: cocodrilo
-        weight: 1
-      - path: Cube
         weight: 1
       - path: dientes_coco
         weight: 1
@@ -702,8 +689,6 @@ ModelImporter:
         weight: 1
       - path: cocodrilo
         weight: 1
-      - path: Cube
-        weight: 1
       - path: dientes_coco
         weight: 1
       maskType: 0
@@ -711,7 +696,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 8
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
