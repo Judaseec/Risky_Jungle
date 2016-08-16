@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts.com.ethereal.util;
 
 public class Character_Controller : MonoBehaviour {
 
@@ -29,7 +30,6 @@ public class Character_Controller : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator>();
-		animator.SetInteger("animation", 0);
 	}
 
 	void FixedUpdate(){
@@ -38,7 +38,6 @@ public class Character_Controller : MonoBehaviour {
 
 		Collider[] hitColliders = Physics.OverlapSphere (groundChecker.position, radiusChecker, floorMask);
 		isGrounded = (hitColliders.Length > 0);
-		animator.SetBool ("isGrounded", isGrounded);
 
 		if(xCamInit <= (xCharacter + 3f) && !runBack){
 			GameObject.Find ("Camera").GetComponent<Follow_Character>().enabled = true;
@@ -54,11 +53,9 @@ public class Character_Controller : MonoBehaviour {
 			xCamInit = cam.transform.position.x;
 			cam.GetComponent<Follow_Character>().enabled = false;
 		}
-		animator.SetFloat ("velX", GetComponent<Rigidbody>().velocity.x);
 
 		if(isGrounded && !run && !runBack && !down && ((Time.time - interval) > 1)){
-			animator.SetInteger("animation", 0);
-			Debug.Log(GetComponent<Animator> ().GetInteger("animation"));
+			animator.Play("idle");
 		}
 	}
 	
@@ -69,22 +66,19 @@ public class Character_Controller : MonoBehaviour {
 		if (isGrounded && Input.GetKeyDown (KeyCode.UpArrow) && !down) {
 			GetComponent<Rigidbody> ().AddForce (new Vector2 (0, jumpForce));
 		} else if (isGrounded && Input.GetKeyDown (KeyCode.UpArrow) && down) {
-			//animator.Play("agachado");
-			animator.SetInteger("animation", 0);
+			animator.Play("agachado");
 			down = false;
 		}
 
 		if (!isGrounded) {
-			//GetComponent<Animator> ().Play("jump");
-			animator.SetInteger("animation", 3);
+			animator.Play("jump");
 		}
 
 		if (Input.GetKey (KeyCode.RightArrow) && isGrounded) {
 			run = true;
 			down = false;
 			NotificationCenter.DefaultCenter().PostNotification(this, "Character_is_running");
-			//GetComponent<Animator> ().Play("run");
-			animator.SetInteger("animation", 1);
+			animator.Play("run");
 		} else {
 			run = false;
 		}
@@ -93,16 +87,14 @@ public class Character_Controller : MonoBehaviour {
 			runBack = true;
 			down = false;
 			//NotificationCenter.DefaultCenter ().PostNotification (this, "Character_is_running_back");
-			//GetComponent<Animator> ().Play ("run");
-			animator.SetInteger("animation", 1);
+			animator.Play ("run");
 		} else {
 			runBack = false;
 		}
 
 		if(Input.GetKeyDown(KeyCode.DownArrow) && isGrounded){
 			down = true;
-			//GetComponent<Animator> ().Play("agachado");
-			animator.SetInteger("animation", 11);
+			animator.Play("agachado");
 		}
 
 		if(Input.GetKeyDown (KeyCode.LeftArrow) && !turned){
@@ -117,11 +109,11 @@ public class Character_Controller : MonoBehaviour {
 
 		if(Input.GetKeyDown (KeyCode.Q)){
 			if(down){
-				//GetComponent<Animator>().Play("disparo_agachado");
-				animator.SetInteger("animation", 14);
+				animator.Play("disparo_agachado");
+				new EthTimer(1000, stayDown, "stay", 1);
 			}
 			else{
-				//GetComponent<Animator>().Play("ataque_cerbatana");
+				animator.Play("ataque_cerbatana");
 				interval = Time.time;
 			}
 		}
@@ -129,5 +121,9 @@ public class Character_Controller : MonoBehaviour {
 
 	void turnCharacter(){
 		GetComponent<Transform> ().Rotate(0,180,0,Space.World);
+	}
+
+	public void stayDown(object stay){
+		animator.Play ("idle");
 	}
 }

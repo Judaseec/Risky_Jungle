@@ -4,6 +4,7 @@ using System.Collections;
 public class Snake_Controller : MonoBehaviour {
 
 	public bool dead = false;
+	public bool inside = false;
 
 	// Use this for initialization
 	void Start () {
@@ -12,14 +13,30 @@ public class Snake_Controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GameObject.Find("Snake_Trigger").GetComponent<Trigger_Controller>().inside && !dead) {
+		if (inside && !dead) {
 			GetComponent<Animator> ().Play("ataque");
 		}
-		else if (!GameObject.Find("Snake_Trigger").GetComponent<Trigger_Controller>().inside && !dead){
+		else if (!inside && !dead){
 			GetComponent<Animator> ().Play("idle");
 		}
 		else if (dead) {
 			GetComponent<Animator> ().Play("morir");
+		}
+
+
+	}
+
+	void OnTriggerEnter(Collider hit){
+		//Si el objeto que entra al trigger tiene el tag principal...
+		if (hit.gameObject.tag == "Principal") {
+			inside=true;
+		}
+	}
+	
+	void OnTriggerExit(Collider hit){
+		//Si el objeto que sale del trigger tiene el tag principal...
+		if (hit.gameObject.tag == "Principal") {
+			inside=false;
 		}
 	}
 }
