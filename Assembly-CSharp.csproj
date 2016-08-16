@@ -67,8 +67,10 @@
      <Compile Include="Assets\Game\Scripts\Controller.cs" />
      <Compile Include="Assets\Game\Scripts\Crocodile_Controller.cs" />
      <Compile Include="Assets\Game\Scripts\Follow_Character.cs" />
+     <Compile Include="Assets\Game\Scripts\Game.cs" />
      <Compile Include="Assets\Game\Scripts\Main_Menu.cs" />
      <Compile Include="Assets\Game\Scripts\NotificationCenter.cs" />
+     <Compile Include="Assets\Game\Scripts\Save.cs" />
      <Compile Include="Assets\Game\Scripts\Scroll.cs" />
      <Compile Include="Assets\Game\Scripts\Snake_Controller.cs" />
      <Compile Include="Assets\Game\Scripts\Trigger_Controller.cs" />
