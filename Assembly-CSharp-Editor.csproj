@@ -248,16 +248,16 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Prime31MenuItem">
- <HintPath>D:/Unity 3D/Proyectos/Risky_Jungle/Assets/Editor/Prime31/Prime31MenuItem.dll</HintPath>
+ <HintPath>D:/Julian/Trabajo de Grado/Repositorio/Risky_Jungle/Assets/Editor/Prime31/Prime31MenuItem.dll</HintPath>
  </Reference>
  <Reference Include="IFacebook">
- <HintPath>D:/Unity 3D/Proyectos/Risky_Jungle/Assets/Facebook/Scripts/IFacebook.dll</HintPath>
+ <HintPath>D:/Julian/Trabajo de Grado/Repositorio/Risky_Jungle/Assets/Facebook/Scripts/IFacebook.dll</HintPath>
  </Reference>
  <Reference Include="P31RestKit">
- <HintPath>D:/Unity 3D/Proyectos/Risky_Jungle/Assets/Plugins/P31RestKit.dll</HintPath>
+ <HintPath>D:/Julian/Trabajo de Grado/Repositorio/Risky_Jungle/Assets/Plugins/P31RestKit.dll</HintPath>
  </Reference>
  <Reference Include="UTNotifications">
- <HintPath>D:/Unity 3D/Proyectos/Risky_Jungle/Assets/Plugins/UTNotifications.dll</HintPath>
+ <HintPath>D:/Julian/Trabajo de Grado/Repositorio/Risky_Jungle/Assets/Plugins/UTNotifications.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -299,6 +299,8 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{9C9C55DB-0DA9-83BF-57A8-B579F475786C}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{5784B4ED-93E9-C6C3-865F-12D41FAE809F}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
       <Project>{1CB0A731-746B-04D4-5748-D84C834B330A}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript-Editor-firstpass.unityproj">

@@ -4,6 +4,9 @@ using System.Collections;
 public class Crocodile_Controller : MonoBehaviour {
 
 	public bool sleep = false;
+	private float life = 150f;
+	public bool dead = false;
+	public bool inside = false;
 
 	// Use this for initialization
 	void Start () {
@@ -12,14 +15,30 @@ public class Crocodile_Controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GameObject.Find("Crocodile_Trigger").GetComponent<Trigger_Controller>().inside && !sleep) {
+		if (inside && !dead) {
 			GetComponent<Animator> ().Play("ataque");
 		}
-		else if(!GameObject.Find("Crocodile_Trigger").GetComponent<Trigger_Controller>().inside && !sleep){
+		else if (!inside && !dead){
 			GetComponent<Animator> ().Play("idle");
 		}
-		else if (sleep) {
+		else if (dead) {
 			GetComponent<Animator> ().Play("muerte");
+		}
+		
+		
+	}
+	
+	void OnTriggerEnter(Collider hit){
+		//Si el objeto que entra al trigger tiene el tag principal...
+		if (hit.gameObject.tag == "Principal") {
+			inside=true;
+		}
+	}
+	
+	void OnTriggerExit(Collider hit){
+		//Si el objeto que sale del trigger tiene el tag principal...
+		if (hit.gameObject.tag == "Principal") {
+			inside=false;
 		}
 	}
 }
