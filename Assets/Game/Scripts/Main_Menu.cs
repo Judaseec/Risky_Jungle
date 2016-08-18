@@ -12,6 +12,8 @@ public class Main_Menu : MonoBehaviour {
 
 	void Start(){
 		continuebtn = Util.GetChildByName (this.gameObject, "Continue");
+		string aux = Eth.EncodeBase64 ("asdasdasd");
+		Debug.Log (aux);
 	}
 
 	void Update(){
