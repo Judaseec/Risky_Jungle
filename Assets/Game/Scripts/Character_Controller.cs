@@ -14,7 +14,7 @@ public class Character_Controller : MonoBehaviour {
 	private Animator animator;
 	public bool run = false;
 	public bool runBack = false;
-	public float velocity = 1f;
+	public float velocity = 10f;
 	public bool turned = false;
 	public bool down = false;
 
