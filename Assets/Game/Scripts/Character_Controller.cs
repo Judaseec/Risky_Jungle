@@ -4,7 +4,7 @@ using Assets.Scripts.com.ethereal.util;
 
 public class Character_Controller : MonoBehaviour {
 
-	public float jumpForce = 1500f;
+	public float jumpForce = 1000f;
 
 	public bool isGrounded = true;
 	public Transform groundChecker;
