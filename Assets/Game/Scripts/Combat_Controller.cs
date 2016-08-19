@@ -14,7 +14,7 @@ public class Combat_Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (colision) {
-			hitobj.gameObject.GetComponent<Animator>().Stop();
+			//hitobj.gameObject.GetComponent<Animator>().Stop();
 		}
 	}
 

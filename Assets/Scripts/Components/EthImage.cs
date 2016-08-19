@@ -49,7 +49,7 @@ public class EthImage : Image{
         Sprite img = Resources.Load<Sprite>( urlImage + "_" + curLanguage );
         this.sprite = img;
 
-        SetNativeSize();
+        //SetNativeSize();
     }
 
     /**
