@@ -17,6 +17,7 @@ public class Character_Controller : MonoBehaviour {
 	public float velocity = 10f;
 	public bool turned = false;
 	public bool down = false;
+	public int life = 100;
 
 	public float xCamInit = 0f;
 	public float xCharacter =0f;
@@ -54,8 +55,12 @@ public class Character_Controller : MonoBehaviour {
 			cam.GetComponent<Follow_Character>().enabled = false;
 		}
 
-		if(isGrounded && !run && !runBack && !down && ((Time.time - interval) > 1)){
-			animator.Play("idle");
+		if (life > 0) {
+			if (isGrounded && !run && !runBack && !down && ((Time.time - interval) > 1)) {
+				animator.Play ("idle");
+			}
+		} else {
+			animator.Play("morir");
 		}
 	}
 	
@@ -117,6 +122,7 @@ public class Character_Controller : MonoBehaviour {
 				interval = Time.time;
 			}
 		}
+
 	}
 
 	void turnCharacter(){
@@ -125,5 +131,9 @@ public class Character_Controller : MonoBehaviour {
 
 	public void stayDown(object stay){
 		animator.Play ("idle");
+	}
+
+	public void setLife(int actual_life){
+		life = actual_life;
 	}
 }

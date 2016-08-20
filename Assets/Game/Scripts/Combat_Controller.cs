@@ -19,26 +19,12 @@ public class Combat_Controller : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision hit) {
-
+		Debug.Log (hit);
 		if (hit.gameObject.tag == "Principal") {
 			hitobj = hit;
-				colision=true;
+			hit.gameObject.GetComponent<Character_Controller>().setLife(0);
+			colision=true;
 		}
 	}
 
-	void OnTriggerEnter(Collider hit){
-		//Si el objeto que entra al trigger tiene el tag principal...
-		if (hit.tag == "Principal") {
-			hit.gameObject.GetComponent<Animator>().Play("morir");
-			enter = true;
-		}
-	}
-	
-	void OnTriggerExit(Collider hit){
-		//Si el objeto que sale del trigger tiene el tag principal...
-		if (hit.gameObject.tag == "Principal") {
-			//inside=false;
-		}
-		enter = false;
-	}
 }
