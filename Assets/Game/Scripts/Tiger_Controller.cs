@@ -14,6 +14,10 @@ public class Tiger_Controller : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		if (life <= 0) {
+			dead = true;
+		}
 		//Debug.Log (GameObject.Find("trigger").GetComponent<Trigger_Controller>().inside);
 		if (inside && !dead) {
 			GetComponent<Animator> ().Play("atacar");
@@ -21,8 +25,10 @@ public class Tiger_Controller : MonoBehaviour {
 		else if (!inside && !dead){
 			GetComponent<Animator> ().Play("idle");
 		}
-		else if (dead) {
+
+		if (dead) {
 			GetComponent<Animator> ().Play("morir");
+			Util.GetChildByName(gameObject,"tigreModel").GetComponent<MeshCollider>().isTrigger = true;
 		}
 	}
 	
@@ -38,5 +44,13 @@ public class Tiger_Controller : MonoBehaviour {
 		if (hit.gameObject.tag == "Principal") {
 			inside=false;
 		}
+	}
+
+	public void applyDamage(){
+		dead = true;
+	}
+
+	public void applyDamage(int damage){
+		life = life - damage;
 	}
 }

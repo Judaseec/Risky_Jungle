@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Bear_Controller : MonoBehaviour {
 
-	private float life = 150f;
+	public float life = 150f;
 	public bool dead = false;
 	public bool inside = false;
 
@@ -15,14 +15,21 @@ public class Bear_Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Debug.Log (GameObject.Find("trigger").GetComponent<Trigger_Controller>().inside);
+		if (life <= 0) {
+			dead = true;
+		}
+
 		if (inside && !dead) {
 			GetComponent<Animator> ().Play("atacar");
 		}
 		else if (!inside && !dead){
 			GetComponent<Animator> ().Play("idle");
 		}
-		else if (dead) {
+
+		if (dead) {
 			GetComponent<Animator> ().Play("morir");
+			//Util.GetChildByName(gameObject,"oso").GetComponent<Combat_Controller>().enabled = false;
+			Util.GetChildByName(gameObject,"osoModel").GetComponent<MeshCollider>().isTrigger = true;
 		}
 	}
 
@@ -38,5 +45,9 @@ public class Bear_Controller : MonoBehaviour {
 		if (hit.gameObject.tag == "Principal") {
 			inside=false;
 		}
+	}
+
+	public void applyDamage(int damage){
+		life = life - damage;
 	}
 }

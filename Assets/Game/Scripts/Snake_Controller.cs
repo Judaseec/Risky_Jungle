@@ -21,6 +21,7 @@ public class Snake_Controller : MonoBehaviour {
 		}
 		else if (dead) {
 			GetComponent<Animator> ().Play("morir");
+			Util.GetChildByName(gameObject,"serpienteModel").GetComponent<MeshCollider>().isTrigger = true;
 		}
 
 
@@ -38,5 +39,9 @@ public class Snake_Controller : MonoBehaviour {
 		if (hit.gameObject.tag == "Principal") {
 			inside=false;
 		}
+	}
+
+	public void applyDamage(){
+		dead = true;
 	}
 }
