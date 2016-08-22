@@ -48,7 +48,7 @@ public class EthUIButton : Button{
 
     	if ( languageSupport ){
             EthText text = gameObject.GetComponentInChildren<EthText>();
-            text.text = EthLang.GetEntry(_textLanguage, true);
+            text.text = EthLang.GetEntry(textLanguage, true);
     		text.languageSupport = languageSupport;
             text.textLanguage = textLanguage;
     	}

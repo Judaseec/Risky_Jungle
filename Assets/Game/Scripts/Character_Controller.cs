@@ -22,6 +22,7 @@ public class Character_Controller : MonoBehaviour {
 
 	public float xCamInit = 0f;
 	public float xCharacter =0f;
+	private bool isSpear = true;
 
 	/**
 	 * 	@breaf variables para el disparo del dardo
@@ -161,5 +162,11 @@ public class Character_Controller : MonoBehaviour {
 		life = actual_life;
 	}
 
+	public void setSpear(){
+		isSpear = true;
+	}
 
+	public void setBlowgun(){
+		isSpear = false;
+	}
 }

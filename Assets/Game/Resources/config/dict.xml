@@ -1,0 +1,9 @@
+<root>
+	<lang name="es">
+		<entry name="pause" value="Pausa"/>
+	</lang>
+
+	<lang name="en">
+		<entry name="pause" value="Pause"/>
+	</lang>
+</root>

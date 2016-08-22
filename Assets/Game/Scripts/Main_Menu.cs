@@ -12,7 +12,7 @@ public class Main_Menu : MonoBehaviour {
 	private Scrollbar music;
 	
 	private bool isConfEnable;
-
+	
 	void Start(){
 		continuebtn = Util.GetChildByName (this.gameObject, "Continue");
 		configPanel = Util.GetChildByName (this.gameObject, "ConfigPanel");
@@ -21,6 +21,7 @@ public class Main_Menu : MonoBehaviour {
 		isConfEnable = false;
 		configPanel.SetActive (isConfEnable);
 		EthLang.LangAct = "es";
+		EthLang.ActiveLangs("config/dict",EthLang.LangAct);
 
 		//Activar los idiomas (EthLang.ActiveLangs)
 
@@ -29,7 +30,6 @@ public class Main_Menu : MonoBehaviour {
 	}
 
 	void Update(){
-
 		if (Save.savedGame.level == 0 && continuebtn.activeInHierarchy) {
 			continuebtn.SetActive (false);
 		} else if (Save.savedGame.level > 0 && !continuebtn.activeInHierarchy) {
@@ -38,7 +38,7 @@ public class Main_Menu : MonoBehaviour {
 	}
 
 	public void NewGame (){
-		SceneHandler.LoadScene("Tutorial", this.gameObject);
+		SceneHandler.LoadScene("Tutorial");
 	}
 
 	public void Conf (){
