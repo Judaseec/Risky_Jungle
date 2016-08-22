@@ -15,14 +15,17 @@ public class Crocodile_Controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		if (inside && !dead) {
 			GetComponent<Animator> ().Play("ataque");
 		}
 		else if (!inside && !dead){
 			GetComponent<Animator> ().Play("idle");
 		}
-		else if (dead) {
+
+		if (dead) {
 			GetComponent<Animator> ().Play("muerte");
+			Util.GetChildByName(gameObject,"cocodriloModel").GetComponent<BoxCollider>().isTrigger = false;
 		}
 		
 		
