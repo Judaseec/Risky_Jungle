@@ -23,6 +23,8 @@ public class Character_Controller : MonoBehaviour {
 	public float xCamInit = 0f;
 	public float xCharacter =0f;
 	private bool isSpear = true;
+	private bool isPaused = false;
+	private GameObject pausePanel;
 
 	/**
 	 * 	@breaf variables para el disparo del dardo
@@ -37,6 +39,8 @@ public class Character_Controller : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator>();
+		pausePanel = GameObject.Find("PauseMenuPanel");
+		pausePanel.SetActive (false);
 	}
 
 	void FixedUpdate(){
@@ -158,6 +162,7 @@ public class Character_Controller : MonoBehaviour {
 		dartInstance.AddForce (blowgunEnd.forward * 400);
 	}
 
+	//Funciones para el HUD
 	public void setLife(int actual_life){
 		life = actual_life;
 	}
@@ -168,5 +173,24 @@ public class Character_Controller : MonoBehaviour {
 
 	public void setBlowgun(){
 		isSpear = false;
+	}
+
+	//Funciones para el menu de pausa
+	public void pause(){
+		isPaused = true;
+		pausePanel.SetActive (true);
+	}
+
+	public void resume(){
+		pausePanel.SetActive (false);
+		isPaused = false;
+	}
+
+	public void restart(){
+		Application.LoadLevel (Save.savedGame.level+1);
+	}
+
+	public void menu(){
+		SceneHandler.LoadScene ("Main_Menu");
 	}
 }

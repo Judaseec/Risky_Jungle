@@ -1,13 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Scripts\Main_Menu.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Scripts\Character_Controller.cs">
     <Files>
-      <File FileName="Assets\Game\Scripts\Character_Controller.cs" Line="148" Column="3" />
-      <File FileName="Assets\Scripts\Components\EthUIButton.cs" Line="81" Column="1" />
-      <File FileName="Assets\Scripts\Components\EthText.cs" Line="15" Column="1" />
-      <File FileName="Assets\Game\Resources\config\dict.xml" Line="3" Column="20" />
-      <File FileName="Assets\Game\Scripts\Main_Menu.cs" Line="16" Column="1" />
-      <File FileName="Assets\Scripts\com\ethereal\util\EthLang.cs" Line="113" Column="72" />
+      <File FileName="Assets\Game\Scripts\Character_Controller.cs" Line="184" Column="23" />
+      <File FileName="Assets\Game\Scripts\Main_Menu.cs" Line="56" Column="2" />
+      <File FileName="Assets\Scripts\Components\SceneHandler.cs" Line="69" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
