@@ -78,9 +78,9 @@ public class Character_Controller : MonoBehaviour {
 	void Update () {
 		xCharacter = transform.position.x;
 		if (life > 0) {
-			if (isGrounded && Input.GetKeyDown (KeyCode.UpArrow) && !down) {
+			if (isGrounded && Input.GetKeyDown (KeyCode.UpArrow) && !down && !isPaused) {
 				GetComponent<Rigidbody> ().AddForce (new Vector2 (0, jumpForce));
-			} else if (isGrounded && Input.GetKeyDown (KeyCode.UpArrow) && down) {
+			} else if (isGrounded && Input.GetKeyDown (KeyCode.UpArrow) && down && !isPaused) {
 				animator.Play ("agachado");
 				down = false;
 			}
@@ -89,7 +89,7 @@ public class Character_Controller : MonoBehaviour {
 				animator.Play ("jump");
 			}
 
-			if (Input.GetKey (KeyCode.RightArrow) && isGrounded) {
+			if (Input.GetKey (KeyCode.RightArrow) && isGrounded && !isPaused) {
 				run = true;
 				down = false;
 				NotificationCenter.DefaultCenter ().PostNotification (this, "Character_is_running");
@@ -98,7 +98,7 @@ public class Character_Controller : MonoBehaviour {
 				run = false;
 			}
 
-			if (Input.GetKey (KeyCode.LeftArrow) && isGrounded) {
+			if (Input.GetKey (KeyCode.LeftArrow) && isGrounded && !isPaused) {
 				runBack = true;
 				down = false;
 				//NotificationCenter.DefaultCenter ().PostNotification (this, "Character_is_running_back");
@@ -107,37 +107,39 @@ public class Character_Controller : MonoBehaviour {
 				runBack = false;
 			}
 
-			if (Input.GetKeyDown (KeyCode.DownArrow) && isGrounded) {
+			if (Input.GetKeyDown (KeyCode.DownArrow) && isGrounded && !isPaused) {
 				down = true;
 				animator.Play ("agachado");
 			}
 
-			if (Input.GetKeyDown (KeyCode.LeftArrow) && !turned) {
+			if (Input.GetKeyDown (KeyCode.LeftArrow) && !turned && !isPaused) {
 				turnCharacter ();
 				turned = true;
 			}
 
-			if (Input.GetKeyDown (KeyCode.RightArrow) && turned) {
+			if (Input.GetKeyDown (KeyCode.RightArrow) && turned && !isPaused) {
 				turnCharacter ();
 				turned = false;
 			}
 
-			if (Input.GetKeyDown (KeyCode.Q)) {
-				if (down) {
-					animator.Play ("disparo_agachado");
-					new EthTimer (1000, stayDown);
-				} else if(!atack){
-					atack=true;
-					animator.Play ("ataque_cerbatana");
-					new EthTimer (500, createDart);
-					new EthTimer (1000, attack);
+			if (Input.GetKeyDown (KeyCode.Q) && !isPaused) {
+				if(!isSpear){
+					if (down) {
+						animator.Play ("disparo_agachado");
+						new EthTimer (1000, stayDown);
+					} else if(!atack){
+						atack=true;
+						animator.Play ("ataque_cerbatana");
+						new EthTimer (500, createDart);
+						new EthTimer (1000, attack);
+					}
+				}else{
+					if (isGrounded && !run && !runBack && !down && !turned && !atack && !isPaused) {
+						atack = true;
+						animator.Play ("ataque_lanza");
+						new EthTimer (1500, attack);
+					}
 				}
-			}
-
-			if (Input.GetKeyDown (KeyCode.W) && isGrounded && !run && !runBack && !down && !turned && !atack) {
-				atack = true;
-				animator.Play ("ataque_lanza");
-				new EthTimer (1500, attack);
 			}
 		}
 	}

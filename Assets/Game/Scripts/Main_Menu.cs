@@ -20,7 +20,9 @@ public class Main_Menu : MonoBehaviour {
 		music = Util.GetChildByName (Util.GetChildByName(this.gameObject, "ConfigPanel"), "MusicScroll").GetComponent<Scrollbar>();
 		isConfEnable = false;
 		configPanel.SetActive (isConfEnable);
-		EthLang.LangAct = "es";
+		if (EthLang.LangAct == null || EthLang.LangAct.Equals ("")) {
+			EthLang.LangAct = Util.GetSystemLanguage ();
+		}
 		EthLang.ActiveLangs("config/dict",EthLang.LangAct);
 
 		//Activar los idiomas (EthLang.ActiveLangs)
