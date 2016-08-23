@@ -18,13 +18,22 @@ public class Character_Controller : MonoBehaviour {
 	public bool turned = false;
 	public bool down = false;
 	public int life = 100;
-	private bool atack = false;
+	private bool attack = false;
 
 	public float xCamInit = 0f;
 	public float xCharacter =0f;
 	private bool isSpear = true;
 	private bool isPaused = false;
 	private GameObject pausePanel;
+	private GameObject controlPanel;
+	private GameObject attackPanel;
+
+	//Controles
+	private bool rightControl;
+	private bool leftControl;
+	private bool attackControl;
+	private bool jumpControl;
+	private bool downControl;
 
 	/**
 	 * 	@breaf variables para el disparo del dardo
@@ -40,10 +49,57 @@ public class Character_Controller : MonoBehaviour {
 	void Start () {
 		animator = GetComponent<Animator>();
 		pausePanel = GameObject.Find("PauseMenuPanel");
+		attackPanel = GameObject.Find("AttackPanel");
+		controlPanel = GameObject.Find("ControlPanel");
 		pausePanel.SetActive (false);
+#if UNITY_STANDALONE || UNITY_WEBPLAYER
+		attackPanel.SetActive(false);
+		controlPanel.SetActive(false);
+#endif
 	}
 
 	void FixedUpdate(){
+		//Validaciones para cambiar el estado de las variables de los controles
+		//Validaciones para windows
+
+#if UNITY_STANDALONE || UNITY_WEBPLAYER
+		//salto
+		if(Input.GetKeyDown (KeyCode.UpArrow)){
+			jumpControl = true;
+		} else{
+			jumpControl = false;
+		}
+
+		//correr a la derecha
+		if(Input.GetKey (KeyCode.RightArrow)){
+			rightControl = true;
+		}else{
+			rightControl = false;
+		}
+
+		//Correr a la izquierda
+		if(Input.GetKey (KeyCode.LeftArrow)){
+			leftControl = true;
+		}else{
+			leftControl = false;
+		}
+
+		//Agacharse
+		if(Input.GetKey (KeyCode.DownArrow)){
+			downControl = true;
+		}else{
+			downControl = false;
+		}
+
+		//Atacar
+		if(Input.GetKey (KeyCode.Q)){
+			attackControl = true;
+		}else{
+			attackControl = false;
+		}
+#elif UNITY_ANDROID
+
+#endif
 		if (life > 0) {
 			GetComponent<Rigidbody> ().AddForce (Physics.gravity * GetComponent<Rigidbody> ().mass);
 
@@ -66,7 +122,7 @@ public class Character_Controller : MonoBehaviour {
 			}
 
 
-			if (isGrounded && !run && !runBack && !down && !atack) {
+			if (isGrounded && !run && !runBack && !down && !attack) {
 				animator.Play ("idle");
 			}
 		} else {
@@ -78,9 +134,9 @@ public class Character_Controller : MonoBehaviour {
 	void Update () {
 		xCharacter = transform.position.x;
 		if (life > 0) {
-			if (isGrounded && Input.GetKeyDown (KeyCode.UpArrow) && !down && !isPaused) {
+			if (isGrounded && jumpControl && !down && !isPaused) {
 				GetComponent<Rigidbody> ().AddForce (new Vector2 (0, jumpForce));
-			} else if (isGrounded && Input.GetKeyDown (KeyCode.UpArrow) && down && !isPaused) {
+			} else if (isGrounded && jumpControl && down && !isPaused) {
 				animator.Play ("agachado");
 				down = false;
 			}
@@ -89,7 +145,7 @@ public class Character_Controller : MonoBehaviour {
 				animator.Play ("jump");
 			}
 
-			if (Input.GetKey (KeyCode.RightArrow) && isGrounded && !isPaused) {
+			if (rightControl && isGrounded && !isPaused) {
 				run = true;
 				down = false;
 				NotificationCenter.DefaultCenter ().PostNotification (this, "Character_is_running");
@@ -98,7 +154,7 @@ public class Character_Controller : MonoBehaviour {
 				run = false;
 			}
 
-			if (Input.GetKey (KeyCode.LeftArrow) && isGrounded && !isPaused) {
+			if (leftControl && isGrounded && !isPaused) {
 				runBack = true;
 				down = false;
 				//NotificationCenter.DefaultCenter ().PostNotification (this, "Character_is_running_back");
@@ -107,38 +163,38 @@ public class Character_Controller : MonoBehaviour {
 				runBack = false;
 			}
 
-			if (Input.GetKeyDown (KeyCode.DownArrow) && isGrounded && !isPaused) {
+			if (downControl && isGrounded && !isPaused) {
 				down = true;
 				animator.Play ("agachado");
 			}
 
-			if (Input.GetKeyDown (KeyCode.LeftArrow) && !turned && !isPaused) {
+			if (leftControl && !turned && !isPaused) {
 				turnCharacter ();
 				turned = true;
 			}
 
-			if (Input.GetKeyDown (KeyCode.RightArrow) && turned && !isPaused) {
+			if (rightControl && turned && !isPaused) {
 				turnCharacter ();
 				turned = false;
 			}
 
-			if (Input.GetKeyDown (KeyCode.Q) && !isPaused) {
+			if (attackControl && !isPaused) {
 				if(!isSpear){
 					if (down) {
 						animator.Play ("disparo_agachado");
 						new EthTimer (500, createDart);
 						new EthTimer (1000, stayDown);
-					} else if(!atack){
-						atack=true;
+					} else if(!attack){
+						attack=true;
 						animator.Play ("ataque_cerbatana");
 						new EthTimer (500, createDart);
-						new EthTimer (1000, attack);
+						new EthTimer (1000, attackAction);
 					}
 				}else{
-					if (isGrounded && !run && !runBack && !down && !turned && !atack && !isPaused) {
-						atack = true;
+					if (isGrounded && !run && !runBack && !down && !turned && !attack && !isPaused) {
+						attack = true;
 						animator.Play ("ataque_lanza");
-						new EthTimer (1500, attack);
+						new EthTimer (1500, attackAction);
 					}
 				}
 			}
@@ -154,8 +210,8 @@ public class Character_Controller : MonoBehaviour {
 		down=false;
 	}
 
-	public void attack(object obj){
-		atack = false;
+	public void attackAction(object obj){
+		attack = false;
 	}
 
 	public void createDart(object obj){
@@ -195,5 +251,45 @@ public class Character_Controller : MonoBehaviour {
 
 	public void menu(){
 		SceneHandler.LoadScene ("Main_Menu");
+	}
+
+	public void upBtnDown(){
+		jumpControl = true;
+	}
+
+	public void upBtnUp(){
+		jumpControl = false;
+	}
+
+	public void downBtnDown(){
+		downControl = true;
+	}
+	
+	public void downBtnUp(){
+		downControl = false;
+	}
+
+	public void rigthBtnDown(){
+		rightControl = true;
+	}
+	
+	public void rightBtnUp(){
+		rightControl = false;
+	}
+
+	public void leftBtnDown(){
+		leftControl = true;
+	}
+	
+	public void leftBtnUp(){
+		leftControl = false;
+	}
+
+	public void attackBtnDown(){
+		attackControl = true;
+	}
+	
+	public void atackBtnUp(){
+		attackControl = false;
 	}
 }
