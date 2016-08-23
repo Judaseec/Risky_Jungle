@@ -126,6 +126,7 @@ public class Character_Controller : MonoBehaviour {
 				if(!isSpear){
 					if (down) {
 						animator.Play ("disparo_agachado");
+						new EthTimer (500, createDart);
 						new EthTimer (1000, stayDown);
 					} else if(!atack){
 						atack=true;

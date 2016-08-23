@@ -22,7 +22,10 @@ public class Combat_Controller : MonoBehaviour {
 		Debug.Log (hit);
 		if (hit.gameObject.tag == "Principal") {
 			hitobj = hit;
-			//hit.gameObject.GetComponent<Character_Controller>().setLife(0);
+			if(!this.gameObject.transform.parent.gameObject.GetComponent<Crocodile_Controller>().getDead()){
+				hit.gameObject.GetComponent<Character_Controller>().setLife(0);
+			}
+
 			colision=true;
 		}
 

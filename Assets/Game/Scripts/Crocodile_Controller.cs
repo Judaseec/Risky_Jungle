@@ -48,4 +48,8 @@ public class Crocodile_Controller : MonoBehaviour {
 	public void applyDamage(){
 		dead = true;
 	}
+
+	public bool getDead(){
+		return dead;
+	}
 }
