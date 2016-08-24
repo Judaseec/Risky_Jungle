@@ -25,6 +25,8 @@ public class Main_Menu : MonoBehaviour {
 		}
 		EthLang.ActiveLangs("config/dict",EthLang.LangAct);
 
+		EthAudio.GetInstance (this).PlayMusic ("Sounds/MenuClip");
+
 		//Activar los idiomas (EthLang.ActiveLangs)
 
 		string aux = Eth.EncodeBase64 ("asdasdasd");
