@@ -65,4 +65,12 @@ public class Main_Menu : MonoBehaviour {
 	public void MusicVolume(){
 		EthAudio.GetInstance (this).SetMusicVolume (music.value * 100);
 	}
+
+	public void clickLang(bool val){
+		if (val) {
+			EthLang.LangAct = "es";
+		} else {
+			EthLang.LangAct = "en";
+		}
+	}
 }
