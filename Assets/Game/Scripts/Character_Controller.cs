@@ -180,9 +180,11 @@ public class Character_Controller : MonoBehaviour {
 
 			if (attackControl && !isPaused) {
 				if(!isSpear){
-					if (down) {
+					if (down && !attack) {
+						attack=true;
 						animator.Play ("disparo_agachado");
-						new EthTimer (500, createDart);
+						new EthTimer (500, createDartDown);
+						new EthTimer (1000, attackAction);
 						new EthTimer (1000, stayDown);
 					} else if(!attack){
 						attack=true;
@@ -218,6 +220,13 @@ public class Character_Controller : MonoBehaviour {
 		//Util.GetChildByName (this.gameObject,"cervatana").GetComponent<Dart_Generator_Controller>().generate();
 		Rigidbody dartInstance;
 		dartInstance = Instantiate (dartPrefab, new Vector3(blowgunEnd.position.x + 1, blowgunEnd.position.y, blowgunEnd.position.z), blowgunEnd.rotation) as Rigidbody;
+		dartInstance.AddForce (blowgunEnd.forward * 400);
+	}
+
+	public void createDartDown(object obj){
+		//Util.GetChildByName (this.gameObject,"cervatana").GetComponent<Dart_Generator_Controller>().generate();
+		Rigidbody dartInstance;
+		dartInstance = Instantiate (dartPrefab, new Vector3(blowgunEnd.position.x + 1, blowgunEnd.position.y - 1, blowgunEnd.position.z), blowgunEnd.rotation) as Rigidbody;
 		dartInstance.AddForce (blowgunEnd.forward * 400);
 	}
 

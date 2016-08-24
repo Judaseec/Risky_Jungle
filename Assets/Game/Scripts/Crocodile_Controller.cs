@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts.com.ethereal.util;
 
 public class Crocodile_Controller : MonoBehaviour {
 
@@ -26,6 +27,8 @@ public class Crocodile_Controller : MonoBehaviour {
 		if (dead) {
 			GetComponent<Animator> ().Play("muerte");
 			Util.GetChildByName(gameObject,"cocodriloModel").GetComponent<BoxCollider>().isTrigger = false;
+
+			new EthTimer (5000, reviveAction);
 		}
 		
 		
@@ -43,6 +46,11 @@ public class Crocodile_Controller : MonoBehaviour {
 		if (hit.gameObject.tag == "Principal") {
 			inside=false;
 		}
+	}
+
+	public void reviveAction(object stay){
+		GetComponent<Animator> ().Play ("idle");
+		dead=false;
 	}
 
 	public void applyDamage(){
