@@ -75,6 +75,7 @@ public class Character_Controller : MonoBehaviour {
 			rightControl = true;
 		}else{
 			rightControl = false;
+			NotificationCenter.DefaultCenter ().PostNotification (this, "Character_is_not_running");
 		}
 
 		//Correr a la izquierda
@@ -112,6 +113,7 @@ public class Character_Controller : MonoBehaviour {
 
 			if (run) {
 				GetComponent<Rigidbody>().velocity = new Vector3(velocity, GetComponent<Rigidbody>().velocity.y, GetComponent<Rigidbody>().velocity.z);
+				//NotificationCenter.DefaultCenter ().PostNotification (this, "Character_is_running");
 			}
 
 			if (runBack) {

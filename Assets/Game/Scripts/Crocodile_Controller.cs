@@ -26,9 +26,7 @@ public class Crocodile_Controller : MonoBehaviour {
 
 		if (dead) {
 			GetComponent<Animator> ().Play("muerte");
-			Util.GetChildByName(gameObject,"cocodriloModel").GetComponent<BoxCollider>().isTrigger = false;
 
-			new EthTimer (5000, reviveAction);
 		}
 		
 		
@@ -51,10 +49,13 @@ public class Crocodile_Controller : MonoBehaviour {
 	public void reviveAction(object stay){
 		GetComponent<Animator> ().Play ("idle");
 		dead=false;
+		Util.GetChildByName(gameObject,"cocodriloModel").GetComponent<BoxCollider>().isTrigger = true;
 	}
 
 	public void applyDamage(){
 		dead = true;
+		Util.GetChildByName(gameObject,"cocodriloModel").GetComponent<BoxCollider>().isTrigger = false;
+		new EthTimer (4000, reviveAction);
 	}
 
 	public bool getDead(){

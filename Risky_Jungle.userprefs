@@ -1,9 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Scripts\Main_Menu.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Scripts\Scroll.cs">
     <Files>
-      <File FileName="..\..\..\Proyecto 672\Juego3\Trunk\Source\Unity\Assets\Game\Scripts\GUI\Settings.cs" Line="96" Column="35" />
-      <File FileName="Assets\Game\Scripts\Main_Menu.cs" Line="73" Column="27" />
+      <File FileName="Assets\Game\Scripts\Crocodile_Controller.cs" Line="57" Column="38" />
+      <File FileName="Assets\Game\Scripts\Character_Controller.cs" Line="116" Column="88" />
+      <File FileName="Assets\Game\Scripts\Main_Menu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game\Scripts\Scroll.cs" Line="47" Column="79" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
