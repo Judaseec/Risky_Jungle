@@ -132,6 +132,7 @@ public class Character_Controller : MonoBehaviour {
 			}
 		} else {
 			animator.Play("morir");
+			new EthTimer(1500, showGameOver);
 		}
 	}
 	
@@ -246,6 +247,10 @@ public class Character_Controller : MonoBehaviour {
 
 	public void setBlowgun(){
 		isSpear = false;
+	}
+
+	public void showGameOver(object obj){
+		gameOverPanel.SetActive (true);
 	}
 
 	//Funciones para el menu de pausa
