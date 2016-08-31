@@ -55,7 +55,7 @@ public class Crocodile_Controller : MonoBehaviour {
 	public void applyDamage(){
 		dead = true;
 		Util.GetChildByName(gameObject,"cocodriloModel").GetComponent<BoxCollider>().isTrigger = false;
-		new EthTimer (4000, reviveAction);
+		new EthTimer (5000, reviveAction);
 	}
 
 	public bool getDead(){
