@@ -16,7 +16,9 @@ public class gameOver : MonoBehaviour {
 	void OnTriggerEnter(Collider hit){
 		//Si el objeto que entra al trigger tiene el tag principal...
 		if (hit.gameObject.tag == "Principal") {
-			//ventana de gameover.
+			Save.savedGame.level += 1;
+			//Save.SaveGame();
+			Application.LoadLevel (Save.savedGame.level+1);
 		}
 	}
 }

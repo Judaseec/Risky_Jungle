@@ -27,6 +27,7 @@ public class Character_Controller : MonoBehaviour {
 	private GameObject pausePanel;
 	private GameObject controlPanel;
 	private GameObject attackPanel;
+	private GameObject gameOverPanel;
 
 	//Controles
 	private bool rightControl;
@@ -51,7 +52,9 @@ public class Character_Controller : MonoBehaviour {
 		pausePanel = GameObject.Find("PauseMenuPanel");
 		attackPanel = GameObject.Find("AttackPanel");
 		controlPanel = GameObject.Find("ControlPanel");
+		gameOverPanel = GameObject.Find("GameOverPanel");
 		pausePanel.SetActive (false);
+		gameOverPanel.SetActive (false);
 #if UNITY_STANDALONE || UNITY_WEBPLAYER
 		attackPanel.SetActive(false);
 		controlPanel.SetActive(false);

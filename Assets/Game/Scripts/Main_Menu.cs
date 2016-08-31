@@ -14,6 +14,7 @@ public class Main_Menu : MonoBehaviour {
 	private bool isConfEnable;
 	
 	void Start(){
+		//Save.LoadGame ();
 		continuebtn = Util.GetChildByName (this.gameObject, "Continue");
 		configPanel = Util.GetChildByName (this.gameObject, "ConfigPanel");
 		effects = Util.GetChildByName (Util.GetChildByName(this.gameObject, "ConfigPanel"), "EffectsScroll").GetComponent<Scrollbar>();
