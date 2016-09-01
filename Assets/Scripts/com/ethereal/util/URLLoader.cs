@@ -93,17 +93,68 @@ namespace Assets.Scripts.com.ethereal.util
         public WWW POST(string url, Dictionary<string, string> post)
         {
 
-            WWWForm form = new WWWForm();
-            foreach (KeyValuePair<String, String> post_arg in post)
-            {
-                form.AddField(post_arg.Key, post_arg.Value);
-            }
-
-            WWW www = new WWW(url, form);
-
-            parent.StartCoroutine(WaitForRequest(www));
-            return www;
+			WWWForm form = new WWWForm();
+			foreach (KeyValuePair<String, String> post_arg in post)
+			{
+				form.AddField(post_arg.Key, post_arg.Value);
+			}
+			//form.headers.Add("X-HTTP-Method-Override", "PUT");
+			WWW www = new WWW(url, form);
+			
+			parent.StartCoroutine(WaitForRequest(www));
+			return www;
         }
+
+		public WWW POST2(string url, Dictionary<string, string> post)
+		{
+			
+			WWWForm form = new WWWForm();
+			JSONObject json = new JSONObject();
+			foreach (KeyValuePair<String, String> post_arg in post)
+			{
+				//form.AddField(post_arg.Key, post_arg.Value);
+				
+				json.AddField(post_arg.Key, post_arg.Value);
+			}
+			
+			Dictionary<string, string> postHeader = new Dictionary<string, string> ();
+			postHeader.Add("Content-Type", "text/json");
+			System.Text.UTF8Encoding encoding = new System.Text.UTF8Encoding();
+			string jsons =json.print();
+			
+			
+			WWW www = new WWW(url,encoding.GetBytes(jsons) , postHeader);
+			
+			parent.StartCoroutine(WaitForRequest(www));
+			return www;
+		}
+
+		/**
+        *	@brief Método usado para enviar una petición http por POST.
+        *	
+        *	Se recibe por parametro una url a la que se envia una petición http, se utiliza un formulario en el cual se agregan todos los 
+        *	datos requeridos encontrados en el diccionario de datos que entra por parámetro.
+        *
+        *	@param url Página web a la que se envia una petición http.
+        *
+        *	@return Retorna un object WWW el cual puede poseer datos de un servidor web.
+        */
+		public WWW PUT(string url, Dictionary<string, string> post)
+		{
+			
+			WWWForm form = new WWWForm();
+			foreach (KeyValuePair<String, String> post_arg in post)
+			{
+				form.AddField(post_arg.Key, post_arg.Value);
+			}
+			form.headers.Add("X-HTTP-Method-Override", "PUT");
+			WWW www = new WWW(url, form);
+			
+			parent.StartCoroutine(WaitForRequest(www));
+			return www;
+		}
+
+
 
         /**
         *	@brief Método usado para esperar una petición http.

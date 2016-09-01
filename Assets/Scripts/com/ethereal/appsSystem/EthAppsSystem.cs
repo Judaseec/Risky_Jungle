@@ -137,7 +137,7 @@ namespace Assets.Scripts.com.ethereal.appsSystem
         /**
         *	@brief End point del servicio web.
         */
-        private static string _urlEthAppsSystem = "http://162.247.76.49/BackEnd/Web/event/";
+        private static string _urlEthAppsSystem = "http://ethgame.com/REST/api/v2/";
 
         /**
         *   @brief Asignación de las propiedades de lectura y escritura a la variable _urlEthAppsSystem.
@@ -250,35 +250,35 @@ namespace Assets.Scripts.com.ethereal.appsSystem
         *
         */
 		private void GetIdDownload(){
-			Debug.Log("QUIEN LO LLAMA?????????");
+			
 			EthAppsSystem ethAppsSystem = EthAppsSystem.GetInstance();
 			Assets.Scripts.com.ethereal.util.URLLoader loader = new Assets.Scripts.com.ethereal.util.URLLoader(this.parent);
 
             Dictionary<string, string> data = new Dictionary<string, string>();
 			
-            data.Add("idApp", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_idApp));
-            data.Add("idDevice", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(SystemInfo.deviceUniqueIdentifier));
-            data.Add("model", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(SystemInfo.deviceModel));
-            data.Add("name", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(SystemInfo.deviceName));
-            data.Add("platformName", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64("" + Application.platform));
-            data.Add("platformVersion", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(SystemInfo.operatingSystem));
-            data.Add("versionEthAppsSystem", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_versionEthAppsSystem));
-            data.Add("format", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64("JSON"));
-            string addData = "";
+            data.Add("idapp",(_idApp));
+            data.Add("iddevice",(SystemInfo.deviceUniqueIdentifier));
+            data.Add("model",(SystemInfo.deviceModel));
+            data.Add("name",(SystemInfo.deviceName));
+            data.Add("platformname",("" + Application.platform));
+            data.Add("platformVvrsion",(SystemInfo.operatingSystem));
+            data.Add("versionEthAppsSystem",(_versionEthAppsSystem));
+           
+            string addData = "{ ";
 
-            addData += "systemLanguage:" + Application.systemLanguage;
-            addData += ";graphicsDeviceVendor:" + SystemInfo.graphicsDeviceVendor;
-            addData += ";processorCount:" + SystemInfo.processorCount;
-            addData += ";supportsAccelerometer:" + SystemInfo.supportsAccelerometer;
-            addData += ";supportsGyroscope:" + SystemInfo.supportsGyroscope;
-            addData += ";supportsLocationService:" + SystemInfo.supportsLocationService;
-            addData += ";supportsVibration:" + SystemInfo.supportsVibration;
-            addData += ";systemMemorySize:" + SystemInfo.systemMemorySize;
+			addData += '"'+"systemLanguage"+'"'+':' +'"'+ Application.systemLanguage+'"';
+			addData += ','+'"'+"graphicsDeviceVendor"+'"'+':' +'"'+SystemInfo.graphicsDeviceVendor+'"';
+			addData += ','+'"'+"processorCount"+'"'+':' +'"'+SystemInfo.processorCount+'"';
+			addData += ','+'"'+"supportsAccelerometer"+'"'+':' +'"'+SystemInfo.supportsAccelerometer+'"';
+			addData += ','+'"'+"supportsGyroscope"+'"'+':' +'"'+SystemInfo.supportsGyroscope+'"';
+			addData += ','+'"'+"supportsLocationService"+'"'+':' +'"'+SystemInfo.supportsLocationService+'"';
+			addData += ','+'"'+"supportsVibration"+'"'+':' +'"'+SystemInfo.supportsVibration+'"';
+			addData += ','+'"'+"systemMemorySize"+'"'+':' +'"'+SystemInfo.systemMemorySize +'"'+" }";
 
-            data.Add("additionalInfo", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(addData));
+            data.Add("additionalInfo",(addData));
 
             loader.OnRespCB += ethAppsSystem.RespGetIdDownload;
-            loader.POST(_urlEthAppsSystem + "getIdDownload", data);
+            loader.POST(_urlEthAppsSystem + "downloads/id", data);
 		}
 
         /**
@@ -365,37 +365,40 @@ namespace Assets.Scripts.com.ethereal.appsSystem
             Debug.Log(success+" | "+resp);
             if (success)
             {
-                try{
+                JSONObjectBoom json = JSONObjectBoom.Parse(resp);
 
-                    JSONObjectBoom json = JSONObjectBoom.Parse(resp);
-
-                    if (json.GetNumber("result") == 200)
+                if (json.GetBoolean("status") == true)
+                {
+                    _idDownload = "" + json.GetNumber("idDownload");
+					if(_idDownload == "" || _idDownload == null || _idDownload == "0")
                     {
-                        _idDownload = "" + json.GetNumber("idDownload");
-    					if(_idDownload == "" || _idDownload == null || _idDownload == "0")
-                        {
-                            _idDownload = json.GetString("idDownload");
-                        }
-                        Debug.Log(_idDownload);
-                        PlayerPrefs.SetString("EthDownloadNumber", _idDownload);
-                        
-                        GetIdSession();
-                    } else {
-    					Debug.Log("error");
-                        SendReady( false );
-    				}
-                }
-                catch( Exception e ){
-                    Debug.Log("exception en idDownload: "+ e);
-                    SendReady( false );
-                }
+                        _idDownload = json.GetString("idDownload");
+                    }
+                    Debug.Log(_idDownload);
+                    PlayerPrefs.SetString("EthDownloadNumber", _idDownload);
+                    
+                    GetIdSession();
+                } else {
+					Debug.Log("error");
+				}
             }
 			else
 			{
             	SendReady( false );
             }
+            /**
+                {
+                    'status' => TRUE,
+                    'idDownload' => "25"
+                }
+            */
         }
 
+		/**
+        *	@brief Método para establecer si está listo
+        *	
+		*	@param success	true o false, para establecer y enviar si está o no listo.
+        */
 		private void SendReady( bool success )
 		{
         	if ( OnReady != null )
@@ -410,22 +413,17 @@ namespace Assets.Scripts.com.ethereal.appsSystem
         */
         public void GetIdSession()
         {
-            
+
             Assets.Scripts.com.ethereal.util.URLLoader loader = new Assets.Scripts.com.ethereal.util.URLLoader(parent);
 
             Dictionary<string, string> data = new Dictionary<string, string>();
-            data.Add("idVersion", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_idVersion));
-            data.Add("idApp", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_idApp));
-            data.Add("idDownload", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_idDownload));
-            data.Add("versionEthAppsSystem", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_versionEthAppsSystem));
-
-            Debug.Log("idDownload: " + _idDownload);
-            Debug.Log("_idVersion: " + _idVersion);
-            Debug.Log("_idApp: " + _idApp);
-            Debug.Log("_versionEthAppsSystem: " + _versionEthAppsSystem);
+            data.Add("idversion", (_idVersion));
+            data.Add("idapp", (_idApp));
+            data.Add("iddownload", (_idDownload));
+            data.Add("versionEthAppsSystem", (_versionEthAppsSystem));
 
             loader.OnRespCB += RespGetIdSesion;
-            loader.POST(_urlEthAppsSystem + "getIdSession", data);
+            loader.POST(_urlEthAppsSystem + "sessions", data);
         }
 
         /**
@@ -437,20 +435,23 @@ namespace Assets.Scripts.com.ethereal.appsSystem
             Assets.Scripts.com.ethereal.util.URLLoader loader = new Assets.Scripts.com.ethereal.util.URLLoader(parent);
 
             Dictionary<string, string> data = new Dictionary<string, string>();
-            data.Add("idVersion", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_idVersion));
-            data.Add("idApp", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_idApp));
-			data.Add("idSession", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_idSession));
-            data.Add("idDownload", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_idDownload));
-            data.Add("versionEthAppsSystem", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_versionEthAppsSystem));
-
+            data.Add("idversion", (_idVersion));
+            data.Add("idapp", (_idApp));
+			data.Add("idsession", (_idSession));
+            data.Add("iddownload", (_idDownload));
+            data.Add("versionEthAppsSystem", (_versionEthAppsSystem));
+			Debug.Log (data.ToString());
             loader.OnRespCB += RespGetVariables;
-            loader.POST(_urlEthAppsSystem + "getVariable", data);
+            loader.GET(_urlEthAppsSystem + "variables", data);
         }
 
         /**
         *	@brief Método encargado de registrar un evento.
         *	
-        *	@param log	evento a registrar.
+        *	@param string category, con la categoría.
+		*	@param string subcategory, con la subcategoría.
+		*	@param string label, con la etiqueta.
+		*	@param string value, con el valor del log.
         *
         */
         public void ReportLog(string category, string subcategory , string label, string value)
@@ -464,19 +465,19 @@ namespace Assets.Scripts.com.ethereal.appsSystem
             Assets.Scripts.com.ethereal.util.URLLoader loader = new Assets.Scripts.com.ethereal.util.URLLoader(parent);
 
             Dictionary<string, string> data = new Dictionary<string, string>();
-            data.Add("idVersion", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_idVersion));
-            data.Add("idApp", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_idApp));
-            data.Add("idDownload", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_idDownload));
-            data.Add("idSession", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_idSession));
-            data.Add("versionEthAppsSystem", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_versionEthAppsSystem));
-			data.Add("category", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(category));
-			data.Add("type", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(subcategory));
-			data.Add("log", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(label));
-			data.Add("value", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(value));
+            data.Add("idversion", (_idVersion));
+            data.Add("idapp", (_idApp));
+            data.Add("iddownload", (_idDownload));
+            data.Add("idsession", (_idSession));
+            data.Add("versionEthAppsSystem", (_versionEthAppsSystem));
+			data.Add("category", (category));
+			data.Add("type", (subcategory));
+			data.Add("log", (label));
+			data.Add("value", (value));
 			
 			loader.OnRespCB += RespLog;
             
-            loader.POST(_urlEthAppsSystem + "reportLog", data);
+            loader.POST(_urlEthAppsSystem + "logs", data);
         }
 		
 		/**
@@ -495,15 +496,15 @@ namespace Assets.Scripts.com.ethereal.appsSystem
 			Assets.Scripts.com.ethereal.util.URLLoader loader = new Assets.Scripts.com.ethereal.util.URLLoader(parent);
 
 			Dictionary<string, string> data = new Dictionary<string, string>();				
-			data.Add("idVersion", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_idVersion));
-			data.Add("idApp", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_idApp));
-			data.Add("idDownload", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_idDownload));
-			data.Add("idSession", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_idSession));
-			data.Add("versionEthAppsSystem", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(_versionEthAppsSystem));
-			data.Add("screen", Assets.Scripts.com.ethereal.util.Eth.EncodeBase64(screen));
+			data.Add("idversion", (_idVersion));
+			data.Add("idapp", (_idApp));
+			data.Add("iddownload", (_idDownload));
+			data.Add("idsession", (_idSession));
+			data.Add("versionEthAppsSystem", (_versionEthAppsSystem));
+			data.Add("screen", (screen));
 			
 			loader.OnRespCB += RespScreen;
-			loader.POST(_urlEthAppsSystem + "reportScreen", data);
+			loader.POST(_urlEthAppsSystem + "screens", data);
 		}
 
 		/**
@@ -519,7 +520,7 @@ namespace Assets.Scripts.com.ethereal.appsSystem
 			{
 				JSONObjectBoom json = JSONObjectBoom.Parse(resp);
 
-				if(json.GetNumber("result") == 403) 
+				if(json.GetBoolean("status") == false) 
 				{
 					GetIdDownload();
 				}
@@ -539,10 +540,10 @@ namespace Assets.Scripts.com.ethereal.appsSystem
 			{
 				JSONObjectBoom json = JSONObjectBoom.Parse(resp);
 
-				if(json.GetNumber("result") == 403) 
-				{
-					GetIdDownload();	
-				}
+				if(json.GetBoolean("status") == false) 
+                {
+                    GetIdDownload();
+                }
 			}
 		}
 
@@ -552,8 +553,8 @@ namespace Assets.Scripts.com.ethereal.appsSystem
         *	@param variableName	con el nombre de la variable.
         *	@param value	con el valor.
         */
-		public void ReportStateVariable( string variableName, string value ){
-			
+		public void ReportStateVariable( string variableName, string value )
+		{			
 			if (!_initiated)
             {
                 return;
@@ -562,16 +563,16 @@ namespace Assets.Scripts.com.ethereal.appsSystem
 			Assets.Scripts.com.ethereal.util.URLLoader loader = new Assets.Scripts.com.ethereal.util.URLLoader(parent);
 
 			Dictionary<string, string> data = new Dictionary<string, string>();				
-			data.Add("idApp", Eth.EncodeBase64(_idApp));
-			data.Add("idDownload",Eth.EncodeBase64(_idDownload));
-			data.Add("versionEthAppsSystem",Eth.EncodeBase64(_versionEthAppsSystem));
-			data.Add("name",Eth.EncodeBase64(variableName));
-			data.Add("value",Eth.EncodeBase64(value));
-			data.Add("idSession",Eth.EncodeBase64(_idSession));
-			Debug.Log(_urlEthAppsSystem + "setRemoteAnaliticVariable");
+			data.Add("idapp", (_idApp));
+			data.Add("iddownload",(_idDownload));
+			data.Add("versionEthAppsSystem",(_versionEthAppsSystem));
+			data.Add("name",(variableName));
+			data.Add("value",(value));
+			data.Add("idsession",(_idSession));
+			Debug.Log(_urlEthAppsSystem + "variables/analitic");
 			loader.OnRespCB += RespState;
 
-			loader.POST(_urlEthAppsSystem + "setRemoteAnaliticVariable", data);
+			loader.POST2(_urlEthAppsSystem + "variables/analitic", data);
 		}
 
 		/**
@@ -599,20 +600,14 @@ namespace Assets.Scripts.com.ethereal.appsSystem
             Debug.Log(success+" | "+resp);
             if (success)
             {
-                try{
-                    JSONObjectBoom json = JSONObjectBoom.Parse(resp);
-                    
-                    if (json.GetNumber("result") == 200)
-                    {
-                        _idSession = "" + json.GetString("idSession");
-                    }
+                JSONObjectBoom json = JSONObjectBoom.Parse(resp);
+                
+                if (json.GetBoolean("status") == true)
+                {
+                    _idSession = "" + json.GetString("idsession");
+                }
 
-                    RefreshVariables();
-                }
-                catch( Exception e ){
-                    Debug.Log("exception en idSession: "+ e);
-                    SendReady( false );
-                }
+                RefreshVariables();
             }
             else
             {
@@ -632,18 +627,12 @@ namespace Assets.Scripts.com.ethereal.appsSystem
             Debug.Log(success+" | "+resp);
             if (success)
             {
-                try{
-                    JSONObjectBoom json = JSONObjectBoom.Parse(resp);
+                JSONObjectBoom json = JSONObjectBoom.Parse(resp);
 
-                    if (json.GetNumber("result") == 200)
-                    {
-                        LoadVariables(json.GetObject("vars"));
-                        SendReady( true );
-                    }
-                }
-                catch( Exception e ){
-                    Debug.Log("exception en getVariables: "+ e);
-                    SendReady( false );
+                if (json.GetBoolean("status") == true)
+                {
+                    LoadVariables(json.GetObject("result").GetObject("vars"));
+                    SendReady( true );
                 }
             }
 			else
@@ -660,7 +649,7 @@ namespace Assets.Scripts.com.ethereal.appsSystem
         public bool CheckInitialInfo()
         {
 
-            _idDownload = PlayerPrefs.GetString("EthDownloadNumber", "");
+			_idDownload = "";//PlayerPrefs.GetString("EthDownloadNumber", "");
 
             if (_idDownload.Length == 0)
             {

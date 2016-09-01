@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Assets.Scripts.com.ethereal.util;
+using Assets.Scripts.com.ethereal.appsSystem;
 
 public class Character_Controller : MonoBehaviour {
 
@@ -132,7 +133,7 @@ public class Character_Controller : MonoBehaviour {
 			}
 		} else {
 			animator.Play("morir");
-			new EthTimer(1500, showGameOver);
+
 		}
 	}
 	
@@ -209,6 +210,13 @@ public class Character_Controller : MonoBehaviour {
 		}
 	}
 
+	void OnCollisionEnter(Collision hit) {
+
+		if(hit.gameObject.tag == "Fall"){
+			new EthTimer(1500, showGameOver);
+		}
+	}
+
 	void turnCharacter(){
 		GetComponent<Transform> ().Rotate(0,180,0,Space.World);
 	}
@@ -239,6 +247,10 @@ public class Character_Controller : MonoBehaviour {
 	//Funciones para el HUD
 	public void setLife(int actual_life){
 		life = actual_life;
+
+		if(life == 0){
+			new EthTimer(1500, showGameOver);
+		}
 	}
 
 	public void setSpear(){

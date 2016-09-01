@@ -24,12 +24,14 @@ public class Water_Controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GameObject.Find("Raft_Trigger").GetComponent<Trigger_Controller>().inside) {
-			//GetComponent<Animator> ().Play("atacar");
-			Rigidbody raft = GameObject.Find("Raft").GetComponent<Rigidbody>();
-			raft.velocity = new Vector3(2, 0, 0);
+		if (GameObject.Find ("Raft_Trigger") != null) {
+			if (GameObject.Find ("Raft_Trigger").GetComponent<Trigger_Controller> ().inside) {
+				//GetComponent<Animator> ().Play("atacar");
+				Rigidbody raft = GameObject.Find ("Raft").GetComponent<Rigidbody> ();
+				raft.velocity = new Vector3 (2, 0, 0);
 
-			//GameObject.Find("indio").GetComponent<ControladorPersonaje>().enabled = false;
+				//GameObject.Find("indio").GetComponent<ControladorPersonaje>().enabled = false;
+			}
 		}
 	}
 }

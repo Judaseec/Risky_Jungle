@@ -79,7 +79,7 @@
      <Compile Include="Assets\Game\Scripts\Trigger_Controller.cs" />
      <Compile Include="Assets\Game\Scripts\Water_Controller.cs" />
      <Compile Include="Assets\Game\Scripts\dartDestroy.cs" />
-     <Compile Include="Assets\Game\Scripts\gameOver.cs" />
+     <Compile Include="Assets\Game\Scripts\levelCleared.cs" />
      <Compile Include="Assets\Game\Scripts\slide_Controller.cs" />
      <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendBusinessEvent.cs" />
      <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendDesignEvent.cs" />

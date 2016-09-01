@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using Assets.Scripts.com.ethereal.util;
 using Assets.Scripts.com.ethereal.audio;
+using Assets.Scripts.com.ethereal.appsSystem;
 
 public class Main_Menu : MonoBehaviour {
 
@@ -10,13 +11,20 @@ public class Main_Menu : MonoBehaviour {
 	private GameObject configPanel;
 	private Scrollbar effects;
 	private Scrollbar music;
+	private GameObject loaderPanel;
 	
 	private bool isConfEnable;
-	
+	public bool isSystemReady = false;
+
+	void Awake(){
+		EthAppsSystem.Init (this, setSystemReady);
+	}
+
 	void Start(){
 		//Save.LoadGame ();
 		continuebtn = Util.GetChildByName (this.gameObject, "Continue");
 		configPanel = Util.GetChildByName (this.gameObject, "ConfigPanel");
+		loaderPanel = Util.GetChildByName (this.gameObject, "LoaderPanel");
 		effects = Util.GetChildByName (Util.GetChildByName(this.gameObject, "ConfigPanel"), "EffectsScroll").GetComponent<Scrollbar>();
 		music = Util.GetChildByName (Util.GetChildByName(this.gameObject, "ConfigPanel"), "MusicScroll").GetComponent<Scrollbar>();
 		isConfEnable = false;
@@ -35,6 +43,9 @@ public class Main_Menu : MonoBehaviour {
 	}
 
 	void Update(){
+		if (isSystemReady) {
+			loaderPanel.SetActive(false);
+		}
 		if (Save.savedGame.level == 0 && continuebtn.activeInHierarchy) {
 			continuebtn.SetActive (false);
 		} else if (Save.savedGame.level > 0 && !continuebtn.activeInHierarchy) {
@@ -43,10 +54,16 @@ public class Main_Menu : MonoBehaviour {
 	}
 
 	public void NewGame (){
+
+			EthAppsSystem.Log (this,"Nuevo juego", "Boton nuevo juego", "nuevo", "nuevo");
+		Debug.Log ("newGame");
+		//tiempo de espera
 		SceneHandler.LoadScene("Tutorial");
 	}
 
 	public void Conf (){
+		EthAppsSystem.LogScreen (this, "Menu configuracion");
+		Debug.Log ("config");
 		isConfEnable = !isConfEnable;
 		configPanel.SetActive (isConfEnable);
 	}
@@ -73,5 +90,9 @@ public class Main_Menu : MonoBehaviour {
 		} else {
 			EthLang.LangAct = "en";
 		}
+	}
+
+	public void setSystemReady(bool obj){
+		isSystemReady = true;
 	}
 }

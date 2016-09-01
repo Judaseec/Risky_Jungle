@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts.com.ethereal.appsSystem;
 
-public class gameOver : MonoBehaviour {
+public class levelCleared : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,9 @@ public class gameOver : MonoBehaviour {
 		if (hit.gameObject.tag == "Principal") {
 			Save.savedGame.level += 1;
 			//Save.SaveGame();
+			//timer
+			EthAppsSystem.ChangeStateVariable(this,"nivel",(Save.savedGame.level+1)+"");
+
 			Application.LoadLevel (Save.savedGame.level+1);
 		}
 	}
