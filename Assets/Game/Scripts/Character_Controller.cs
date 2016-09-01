@@ -3,52 +3,160 @@ using System.Collections;
 using Assets.Scripts.com.ethereal.util;
 using Assets.Scripts.com.ethereal.appsSystem;
 
+/**
+*	@class Character_Controller
+*	@brief Clase que controla las interacciones y movimientos del personaje principal.
+*
+*	@author Dival Mauricio Hoyos Castro <dmhoyosc@gmail.com>
+*	@author Julian David Serna Echeverri<jdsernae@gmail.com>
+*/
 public class Character_Controller : MonoBehaviour {
 
+	/**
+	*	@brief Variable que controla la fuerza del salto del personaje.
+	*/
 	public float jumpForce = 500f;
 
+	/**
+	*	@brief Variable que define si el personaje se encuentra sobre un terreno.
+	*/
 	public bool isGrounded = true;
+
+	/**
+	*	@brief Componente transform que s eutiliza para verificar si el personaje está sobre un terreno.
+	*/
 	public Transform groundChecker;
+
+	/**
+	*	@brief Radio de detección del ground checker.
+	*/
 	private float radiusChecker = 0.03f;
+
+	/**
+	*	@brief Layer para definir los game objects de tipo terreno.
+	*/
 	public LayerMask floorMask;
 
+	/**
+	*	@brief Variable que representa el componente animator del personaje principal.
+	*/
 	private Animator animator;
+
+	/**
+	*	@brief Variable que define si el personaje está corriendo.
+	*/
 	public bool run = false;
+
+	/**
+	*	@brief Variable que define si el personaje está corriendo hacia atras.
+	*/
 	public bool runBack = false;
+
+	/**
+	*	@brief Velocidad de movimiento del personaje principal.
+	*/
 	public float velocity = 10f;
+
+	/**
+	*	@brief Variable que indica si el personaje esta mirando hacia atrás.
+	*/
 	public bool turned = false;
+
+	/**
+	*	@brief Variable que define si el personaje se encuentra agachado.
+	*/
 	public bool down = false;
+
+	/**
+	*	@brief Puntos de vida del personaje.
+	*/
 	public int life = 100;
+
+	/**
+	*	@brief Variable que define si el personaje esta realizando un ataque.
+	*/
 	private bool attack = false;
 
 	public float xCamInit = 0f;
+
+	/**
+	*	@brief Posición inicial de la cámara.
+	*/
 	public float xCharacter =0f;
+
+	/**
+	*	@brief Variable que define si la lanza esta seleccionada como arma.
+	*/
 	private bool isSpear = true;
+
+	/**
+	*	@brief Variable que define si el juego está pausado.
+	*/
 	private bool isPaused = false;
+
+	/**
+	*	@brief Game object que representa la ventana de pausa.
+	*/
 	private GameObject pausePanel;
+
+	/**
+	*	@brief Game object que representa el panel donde se encuentran los controles de movimiento.
+	*/
 	private GameObject controlPanel;
+
+	/**
+	*	@brief Game object que representa el panel donde se encuentran los controles de ataque.
+	*/
 	private GameObject attackPanel;
+
+	/**
+	*	@brief Game object que representa la ventana de game over.
+	*/
 	private GameObject gameOverPanel;
 
 	//Controles
+	/**
+	*	@brief Variable que define si el botón de desplazamiento hacia la derecha está presionado.
+	*/
 	private bool rightControl;
+
+	/**
+	*	@brief Variable que define si el botón de desplazamiento hacia la izquierda está presionado.
+	*/
 	private bool leftControl;
+
+	/**
+	*	@brief Variable que define si el botón de ataque está presionado.
+	*/
 	private bool attackControl;
+
+	/**
+	*	@brief Variable que define si el botón de salto está presionado.
+	*/
 	private bool jumpControl;
+
+	/**
+	*	@brief Variable que define si el botón de agacharse está presionado.
+	*/
 	private bool downControl;
 
 	/**
-	 * 	@breaf variables para el disparo del dardo
+	 * 	@breaf variable para el disparo del dardo
 	 */
 	public Rigidbody dartPrefab;
+
+	/**
+	 * 	@breaf variable para el disparo del dardo
+	 */
 	public Transform blowgunEnd;
 	
-	void Awake() {
-
-	}
-
-	// Use this for initialization
-	void Start () {
+	/**
+	* 	@breaf Método que se ejecuta una vez se ejecuta la escena.
+	*
+	*	Inicializa el componente animator, oculta las pantallas de game over y pausa para permitirle al usuario jugar.
+	*	Si la plataforma es móvil muestra los controles de desplazamiento.
+	*/
+	public void Start () {
 		animator = GetComponent<Animator>();
 		pausePanel = GameObject.Find("PauseMenuPanel");
 		attackPanel = GameObject.Find("AttackPanel");
@@ -62,7 +170,12 @@ public class Character_Controller : MonoBehaviour {
 #endif
 	}
 
-	void FixedUpdate(){
+	/**
+	* 	@breaf Método que configura la interacción de los controles en caso de que la plataforma no sea móvil.
+	*
+	*	Ademas valida que la cámara no siga al personaje si este se devuelve.
+	*/
+	public void FixedUpdate(){
 		//Validaciones para cambiar el estado de las variables de los controles
 		//Validaciones para windows
 
@@ -137,8 +250,10 @@ public class Character_Controller : MonoBehaviour {
 		}
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	/**
+	* 	@breaf Este método se ejecuta una vez por frame y en él se hacen las validaciones de las animaciones del personaje principal.
+	*/
+	public void Update () {
 		xCharacter = transform.position.x;
 		if (life > 0) {
 			if (isGrounded && jumpControl && !down && !isPaused) {
@@ -210,26 +325,49 @@ public class Character_Controller : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionEnter(Collision hit) {
+	/**
+	* 	@breaf Método para detectar cuando el personaje cae a un precipicio o agua.
+	*
+	*	@param Collision hit Objeto con el que se genera la colisión.
+	*/
+	public void OnCollisionEnter(Collision hit) {
 
 		if(hit.gameObject.tag == "Fall"){
 			new EthTimer(1500, showGameOver);
 		}
 	}
 
-	void turnCharacter(){
+	/**
+	* 	@breaf Método para girar el personaje 180 grados en el eje Y.
+	*/
+	public void turnCharacter(){
 		GetComponent<Transform> ().Rotate(0,180,0,Space.World);
 	}
 
+	/**
+	* 	@breaf Método para reproducri la animación de idle despues de estar agachado.
+	*
+	*	@param object obk Objeto que genera la acción.
+	*/
 	public void stayDown(object stay){
 		animator.Play ("idle");
 		down=false;
 	}
 
+	/**
+	* 	@breaf Método para definir el inicio de un ataque.
+	*
+	*	@param object obk Objeto que genera la acción.
+	*/
 	public void attackAction(object obj){
 		attack = false;
 	}
 
+	/**
+	* 	@breaf Método para generar un dardo desde la cerbatana.
+	*
+	*	@param object obk Objeto que genera la acción.
+	*/
 	public void createDart(object obj){
 		//Util.GetChildByName (this.gameObject,"cervatana").GetComponent<Dart_Generator_Controller>().generate();
 		Rigidbody dartInstance;
@@ -237,6 +375,11 @@ public class Character_Controller : MonoBehaviour {
 		dartInstance.AddForce (blowgunEnd.forward * 400);
 	}
 
+	/**
+	* 	@breaf Método para generar un dardo cuando el personaje está agachado.
+	*
+	*	@param object obk Objeto que genera la acción.
+	*/
 	public void createDartDown(object obj){
 		//Util.GetChildByName (this.gameObject,"cervatana").GetComponent<Dart_Generator_Controller>().generate();
 		Rigidbody dartInstance;
@@ -244,7 +387,11 @@ public class Character_Controller : MonoBehaviour {
 		dartInstance.AddForce (blowgunEnd.forward * 400);
 	}
 
-	//Funciones para el HUD
+	/**
+	* 	@breaf Método para modificar la vida del personaje.
+	*
+	*	@param int actual_life Nuevo valor de la vida del personaje.
+	*/
 	public void setLife(int actual_life){
 		life = actual_life;
 
@@ -253,73 +400,125 @@ public class Character_Controller : MonoBehaviour {
 		}
 	}
 
+	/**
+	* 	@breaf Método para asignar la lanza como arma.
+	*/
 	public void setSpear(){
 		isSpear = true;
 	}
 
+	/**
+	* 	@breaf Método para asignar la cerbatana como arma.
+	*/
 	public void setBlowgun(){
 		isSpear = false;
 	}
 
+	/**
+	* 	@breaf Método para mostrar la pantalla de game over.
+	*
+	*	@param object obk Objeto que genera la acción.
+	*/
 	public void showGameOver(object obj){
 		gameOverPanel.SetActive (true);
 	}
 
-	//Funciones para el menu de pausa
+	/**
+	* 	@breaf Método para mostrar el menú de pausa.
+	*/
 	public void pause(){
 		isPaused = true;
 		pausePanel.SetActive (true);
 	}
 
+	/**
+	* 	@breaf Método para reanudar la partida.
+	*/
 	public void resume(){
 		pausePanel.SetActive (false);
 		isPaused = false;
 	}
 
+	/**
+	* 	@breaf Método para reiniciar el nivel.
+	*/
 	public void restart(){
 		Application.LoadLevel (Save.savedGame.level+1);
 	}
 
+	/**
+	* 	@breaf Método para regresar al menú principal.
+	*/
 	public void menu(){
 		SceneHandler.LoadScene ("Main_Menu");
 	}
 
+	/**
+	* 	@breaf Indica que se presionó la tecla de salto.
+	*/
 	public void upBtnDown(){
 		jumpControl = true;
 	}
 
+	/**
+	* 	@breaf Indica que se solto el botón de salto.
+	*/
 	public void upBtnUp(){
 		jumpControl = false;
 	}
 
+	/**
+	* 	@breaf Indica que se presionó el botón de agachado.
+	*/
 	public void downBtnDown(){
 		downControl = true;
 	}
 	
+	/**
+	* 	@breaf Indica que se soltó el botón de agachado.
+	*/
 	public void downBtnUp(){
 		downControl = false;
 	}
 
+	/**
+	* 	@breaf Indica que se presionó el botón de desplazamiento a la derecha.
+	*/
 	public void rigthBtnDown(){
 		rightControl = true;
 	}
 	
+	/**
+	* 	@breaf Indica que se soltó el botón de desplazamiento a la derecha.
+	*/
 	public void rightBtnUp(){
 		rightControl = false;
 	}
 
+	/**
+	* 	@breaf Indica que se presionó el botón de desplazamiento a la izquierda.
+	*/
 	public void leftBtnDown(){
 		leftControl = true;
 	}
 	
+	/**
+	* 	@breaf Indica que se soltó el botón de desplazamiento a la izquierda.
+	*/
 	public void leftBtnUp(){
 		leftControl = false;
 	}
 
+	/**
+	* 	@breaf Indica que se presionó el botón de ataque.
+	*/
 	public void attackBtnDown(){
 		attackControl = true;
 	}
 	
+	/**
+	* 	@breaf Indica que se soltó el botón de ataque.
+	*/
 	public void atackBtnUp(){
 		attackControl = false;
 	}

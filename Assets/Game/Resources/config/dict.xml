@@ -1,9 +1,13 @@
 <root>
 	<lang name="es">
 		<entry name="pause" value="Pausa"/>
+		<entry name="attack" value="Atacar"/>
+		<entry name="jump" value="Saltar"/>
 	</lang>
 
 	<lang name="en">
 		<entry name="pause" value="Pause"/>
+		<entry name="attack" value="Attack"/>
+		<entry name="jump" value="Jump"/>
 	</lang>
 </root>

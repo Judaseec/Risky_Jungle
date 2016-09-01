@@ -1,24 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+*	@class slide_Controller
+*	@brief Clase encargada de administrar cuando el personaje resbala.
+*
+*	@author Dival Mauricio Hoyos Castro <dmhoyosc@gmail.com>
+*	@author Julian David Serna Echeverri<jdsernae@gmail.com>
+*/
 public class slide_Controller : MonoBehaviour {
 
+	/**
+	 * @brief Variable de prueba.
+	 */
 	public bool debug = false;
+
+	/**
+	 * @brief Poición del personaje en el eje Y.
+	 */
 	public float hito = 0f;
+
+	/**
+	 * @brief Posición inicial de la cámara en el eje Y.
+	 */
 	public float yCamInit = 0f;
 
-	public 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-	void OnTriggerEnter(Collider hit){
+	/**
+	 * @brief Método para detectar cuando el personaje entra en zona resbaladiza.
+	 */
+	public void OnTriggerEnter(Collider hit){
 		//Si el objeto que entra al trigger tiene el tag principal...
 		if (hit.gameObject.tag == "Principal") {
 
@@ -32,7 +42,10 @@ public class slide_Controller : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerExit(Collider hit){
+	/**
+	 * @brief Método para detectar cuando el personaje sale de la zona resbaladiza.
+	 */
+	public void OnTriggerExit(Collider hit){
 		//Si el objeto que sale del trigger tiene el tag principal...
 		if (hit.gameObject.tag == "Principal") {
 
@@ -43,7 +56,10 @@ public class slide_Controller : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerStay(Collider hit) {
+	/**
+	 * @brief Método para detectar si el personaje permanece en la zona resbaladiza.
+	 */
+	public void OnTriggerStay(Collider hit) {
 		if (hit.gameObject.tag == "Principal") {
 
 			GameObject cam = GameObject.Find ("Camera");

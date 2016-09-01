@@ -1,11 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+*	@class Water_Controller
+*	@brief Clase que controla las interacciones o movimientos del oso.
+*
+*	@author Dival Mauricio Hoyos Castro <dmhoyosc@gmail.com>
+*	@author Julian David Serna Echeverri<jdsernae@gmail.com>
+*/
 public class Water_Controller : MonoBehaviour {
 
+	/**
+	*	@brief Variable que indica si el personaje esta haciendo contacto con el agua.
+	*/
 	public bool waterSurfaceTouch = false;
 
-	void OnTriggerStay (Collider hit)
+	/**
+	*	@brief Método que define si el personaje está en el agua.
+	*
+	*	@param Collider hit Collider del objeto que permanece en el agua.
+	*/
+	public void OnTriggerStay (Collider hit)
 	{
 		if(hit.gameObject.tag == "Principal")
 		{
@@ -17,13 +32,10 @@ public class Water_Controller : MonoBehaviour {
 
 	}
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+	/**
+	*	@brief Método que le agrega una fuerza a la balsa.
+	*/
+	public void Update () {
 		if (GameObject.Find ("Raft_Trigger") != null) {
 			if (GameObject.Find ("Raft_Trigger").GetComponent<Trigger_Controller> ().inside) {
 				//GetComponent<Animator> ().Play("atacar");

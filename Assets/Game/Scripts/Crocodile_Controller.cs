@@ -2,7 +2,8 @@
 using System.Collections;
 using Assets.Scripts.com.ethereal.util;
 
-/*
+/**
+*	@class Crocodile_Controller
 *	@brief Clase que controla las interacciones o movimientos del cocodrilo.
 *
 *	@author Dival Mauricio Hoyos Castro <dmhoyosc@gmail.com>
@@ -10,33 +11,30 @@ using Assets.Scripts.com.ethereal.util;
 */
 public class Crocodile_Controller : MonoBehaviour {
 
-	/*
+	/**
 	*	@brief Variable que muestra si el cocodrilo esta dormido.
 	*/
 	public bool sleep = false;
 
-	/*
+	/**
 	*	@brief Variable que muestra la vida del cocodrilo.
 	*/
 	private float life = 150f;
 
-	/*
+	/**
 	*	@brief Variable que muestra si el cocodrilo esta muerto (dormido).
 	*/
 	public bool dead = false;
 
-	/*
+	/**
 	*	@brief Variable que muestra si el cocodrilo esta dormido.
 	*/
 	public bool inside = false;
-
-	// Use this for initialization
-	void Start () {
 	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+	/**
+	* 	@breaf método que se actualiza una vez por frame y admionsitra las animaciones del cocodrilo.
+	*/
+	public void Update () {
 
 		if (inside && !dead) {
 			GetComponent<Animator> ().Play("ataque");
@@ -53,31 +51,31 @@ public class Crocodile_Controller : MonoBehaviour {
 		
 	}
 	
-	/*
+	/**
 	*	@brief Metodo ejecutado cuando un collider(trigger) ingresa en el collider(area de ataque) del cocodrilo.
 	*	
 	*	@param Collider hit Collider que ingresa en el area del collider del cocodrilo.
 	*/
-	void OnTriggerEnter(Collider hit){
+	public void OnTriggerEnter(Collider hit){
 		//Si el objeto que entra al trigger tiene el tag principal...
 		if (hit.gameObject.tag == "Principal") {
 			inside=true;
 		}
 	}
 	
-	/*
+	/**
 	*	@brief Metodo ejecutado cuando un collider(trigger) sale del collider(area de ataque) del cocodrilo.
 	*	
 	*	@param Collider hit Collider que sale del area del collider del cocodrilo.
 	*/
-	void OnTriggerExit(Collider hit){
+	public void OnTriggerExit(Collider hit){
 		//Si el objeto que sale del trigger tiene el tag principal...
 		if (hit.gameObject.tag == "Principal") {
 			inside=false;
 		}
 	}
 
-	/*
+	/**
 	*	@brief Metodo ejecutado 5 segundos despues de que se determina que el cocodrilo ha muerto.
 	*	
 	*	@param Collider hit Collider que sale del area del collider del cocodrilo.
@@ -91,7 +89,7 @@ public class Crocodile_Controller : MonoBehaviour {
 		Util.GetChildByName(gameObject,"cocodriloModel").GetComponent<BoxCollider>().isTrigger = true;
 	}
 
-	/*
+	/**
 	*	@brief Metodo que aplica el daño hecho al cocodrilo.
 	*	
 	*	@param int damage Daño que le hacen al cocodrilo por ataque.
@@ -102,7 +100,7 @@ public class Crocodile_Controller : MonoBehaviour {
 		new EthTimer (5000, reviveAction);
 	}
 
-	/*
+	/**
 	*	@brief Metodo para obtener si el cocodrilo esta muerto.
 	*/
 	public bool getDead(){
