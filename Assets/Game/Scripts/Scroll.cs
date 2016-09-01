@@ -54,12 +54,18 @@ public class Scroll : MonoBehaviour {
 		NotificationCenter.DefaultCenter ().AddObserver (this, "Character_is_not_running");
 	}
 
+	/*
+	 * @brief Metodo que notifica que el personaje esta corriendo.
+	 */
 	void Character_is_running(){
 		moving = true;
 		start_time = Time.time;
 		//GetComponent<Renderer> ().material.mainTextureOffset.x = xoffset;
 	}
 
+	/*
+	 * @brief Metodo que notifica que el personaje no esta corriendo.
+	 */
 	void Character_is_not_running(){
 		moving = false;
 		end_time = Time.time;
