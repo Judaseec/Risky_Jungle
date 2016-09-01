@@ -1,11 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+*	@brief Clase que controla las acciones del combate entre personajes.
+*
+*	@author Dival Mauricio Hoyos Castro <dmhoyosc@gmail.com>
+*	@author Julian David Serna Echeverri<jdsernae@gmail.com>
+*/
 public class Combat_Controller : MonoBehaviour {
 
+	/*
+	*	@brief Variable que muestra si el personaje entra en el area de ataque de algun animal.
+	*/
 	public bool enter = false;
+
+	/*
+	*	@brief Variable que muestra si existe una collision entre personaje y animales.
+	*/
 	public bool colision = false;
+
+	/*
+	*	@brief Collider guardado del personaje que choca con el collider del atacante.
+	*/
 	private Collision hitobj;
+	
 	// Use this for initialization
 	void Start () {
 	
@@ -18,6 +36,11 @@ public class Combat_Controller : MonoBehaviour {
 		}
 	}
 
+	/*
+	*	@brief Metodo ejecutado cuando un collider choca con el collider que posee este script.
+	*	
+	*	@param Collider hit Collider del enemigo que choca con el del objeto actual.
+	*/
 	void OnCollisionEnter(Collision hit) {
 		Debug.Log (hit);
 		if (hit.gameObject.tag == "Principal") {
