@@ -68,6 +68,8 @@ namespace Assets.Scripts.com.ethereal.appsSystem
         */
         public MonoBehaviour parent;
 
+		public static bool isready=false;
+
         /**
         *	@brief Conjunto de las variables que se han registrado en el sistema web exportadas de la base de datos.
         */
@@ -404,6 +406,7 @@ namespace Assets.Scripts.com.ethereal.appsSystem
         	if ( OnReady != null )
 			{
         		OnReady( success );
+				isready = success;
         	}
         }
 		

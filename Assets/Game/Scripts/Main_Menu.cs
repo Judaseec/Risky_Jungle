@@ -17,7 +17,7 @@ public class Main_Menu : MonoBehaviour {
 	public bool isSystemReady = false;
 
 	void Awake(){
-		EthAppsSystem.Init (this, setSystemReady);
+			EthAppsSystem.Init (this, setSystemReady);
 	}
 
 	void Start(){
@@ -43,7 +43,7 @@ public class Main_Menu : MonoBehaviour {
 	}
 
 	void Update(){
-		if (isSystemReady) {
+		if (isSystemReady || EthAppsSystem.isready) {
 			loaderPanel.SetActive(false);
 		}
 		if (Save.savedGame.level == 0 && continuebtn.activeInHierarchy) {
