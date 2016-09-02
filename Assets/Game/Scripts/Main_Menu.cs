@@ -117,6 +117,14 @@ public class Main_Menu : MonoBehaviour {
 	}
 
 	/**
+	*	@brief Método para cerrar el menu de configuracion.
+	*/
+	public void closeConf(){
+		isConfEnable = false;
+		configPanel.SetActive (isConfEnable);
+	}
+
+	/**
 	*	@brief Método para configurar el lenguaje a español.
 	*/
 	public void Esp (){

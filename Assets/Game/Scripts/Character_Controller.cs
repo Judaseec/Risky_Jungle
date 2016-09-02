@@ -401,17 +401,16 @@ public class Character_Controller : MonoBehaviour {
 	}
 
 	/**
-	* 	@breaf Método para asignar la lanza como arma.
+	* 	@breaf Método para modificar el arma equipada
+	* 
+	* 	@param bool var True para equipar la lanza o false para equipar la cerbatana.
 	*/
-	public void setSpear(){
-		isSpear = true;
-	}
-
-	/**
-	* 	@breaf Método para asignar la cerbatana como arma.
-	*/
-	public void setBlowgun(){
-		isSpear = false;
+	public void setGun(bool var){
+		if (var) {
+			isSpear = true;
+		} else {
+			isSpear = false;
+		}
 	}
 
 	/**
