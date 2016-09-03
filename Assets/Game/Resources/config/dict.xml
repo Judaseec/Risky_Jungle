@@ -3,11 +3,21 @@
 		<entry name="pause" value="Pausa"/>
 		<entry name="attack" value="Atacar"/>
 		<entry name="jump" value="Saltar"/>
+		<entry name="advice1" value="En la parte inferior izquierda de la pantalla están los controles de movimiento (izquierda - derecha) y el botón de agacarse"/>
+		<entry name="advice2" value="En la parte inferior derecha de la pantalla están los botones para saltar y atacar"/>
+		<entry name="advice3" value="El la parte superior izquierda de la pantalla podras elegir entre usar la lanza o la cerbatana para atacar"/>
+		<entry name="advice4" value="La cerbatana no es suficientemente fuerte para algunos rivales"/>
+		<entry name="advice5" value="La piel del cocodrilo es demasiado dura para morir con los dardos de cerbatana, cuidado! solo estará aturdido!"/>
 	</lang>
 
 	<lang name="en">
 		<entry name="pause" value="Pause"/>
 		<entry name="attack" value="Attack"/>
 		<entry name="jump" value="Jump"/>
+		<entry name="advice1" value="Testing advice"/>
+		<entry name="advice2" value="2"/>
+		<entry name="advice3" value="3"/>
+		<entry name="advice4" value="4"/>
+		<entry name="advice5" value="5"/>
 	</lang>
 </root>

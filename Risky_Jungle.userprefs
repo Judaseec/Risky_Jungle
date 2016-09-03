@@ -1,18 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Scripts\Main_Menu.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game\Scripts\Advice_Controller.cs">
     <Files>
-      <File FileName="Assets\Game\Scripts\Main_Menu.cs" Line="124" Column="40" />
-      <File FileName="Assets\Game\Scripts\Character_Controller.cs" Line="406" Column="82" />
-      <File FileName="Assets\Game\Scripts\Scroll.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game\Scripts\Main_Menu.cs" Line="70" Column="40" />
+      <File FileName="Assets\Game\Scripts\Character_Controller.cs" Line="536" Column="1" />
+      <File FileName="Assets\Game\Scripts\Scroll.cs" Line="15" Column="2" />
       <File FileName="Assets\Game\Scripts\slide_Controller.cs" Line="1" Column="1" />
       <File FileName="Assets\Game\Scripts\Crocodile_Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Game\Scripts\levelCleared.cs" Line="1" Column="1" />
-      <File FileName="Assets\Game\Scripts\Save.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game\Scripts\levelCleared.cs" Line="28" Column="51" />
+      <File FileName="Assets\Game\Scripts\Save.cs" Line="44" Column="1" />
       <File FileName="Assets\Game\Scripts\Follow_Character.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\com\ethereal\appsSystem\EthAppsSystem.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Boomlagoon\JSON\JSONObject.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\com\ethereal\util\URLLoader.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Components\Util.cs" Line="120" Column="1" />
+      <File FileName="Assets\Game\Scripts\Advice_Controller.cs" Line="45" Column="19" />
+      <File FileName="Assets\Scripts\Components\EthText.cs" Line="49" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

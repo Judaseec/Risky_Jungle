@@ -46,7 +46,7 @@ public class EthText : Text{
     */
     public void OnGUI(){
     	if ( languageSupport ){
-    		this.text = EthLang.GetEntry(_textLanguage, true);
+    		this.text = EthLang.GetEntry(textLanguage, true);
     	}
     }
 }

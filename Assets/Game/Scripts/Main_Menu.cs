@@ -38,7 +38,7 @@ public class Main_Menu : MonoBehaviour {
 	*	@brief Game object que representa el panel de carga.
 	*/
 	private GameObject loaderPanel;
-	
+
 	/**
 	*	@brief Define si el menú de configuración está activo.
 	*/

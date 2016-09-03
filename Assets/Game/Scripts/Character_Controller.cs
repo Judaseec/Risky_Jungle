@@ -110,15 +110,21 @@ public class Character_Controller : MonoBehaviour {
 	private GameObject attackPanel;
 
 	/**
+	*	@brief Game object que representa el panel donde se encuentran los controles de arma.
+	*/
+	private GameObject weaponPanel;
+
+	/**
 	*	@brief Game object que representa la ventana de game over.
 	*/
 	private GameObject gameOverPanel;
+
 
 	//Controles
 	/**
 	*	@brief Variable que define si el botón de desplazamiento hacia la derecha está presionado.
 	*/
-	private bool rightControl;
+	public bool rightControl;
 
 	/**
 	*	@brief Variable que define si el botón de desplazamiento hacia la izquierda está presionado.
@@ -162,6 +168,7 @@ public class Character_Controller : MonoBehaviour {
 		attackPanel = GameObject.Find("AttackPanel");
 		controlPanel = GameObject.Find("ControlPanel");
 		gameOverPanel = GameObject.Find("GameOverPanel");
+		weaponPanel = GameObject.Find("WeaponPanel");
 		pausePanel.SetActive (false);
 		gameOverPanel.SetActive (false);
 #if UNITY_STANDALONE || UNITY_WEBPLAYER
@@ -520,5 +527,15 @@ public class Character_Controller : MonoBehaviour {
 	*/
 	public void atackBtnUp(){
 		attackControl = false;
+	}
+
+	/**
+	* @brief Metodo para cerrar la ventana de consejo.
+	*/
+	public void closeAdvice(){
+		GameObject.Find("Advice").SetActive (false);
+		weaponPanel.SetActive(true);
+		attackPanel.SetActive(true);
+		controlPanel.SetActive(true);
 	}
 }
