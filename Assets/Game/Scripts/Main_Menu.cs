@@ -100,7 +100,7 @@ public class Main_Menu : MonoBehaviour {
 	*/
 	public void NewGame (){
 
-			EthAppsSystem.Log (this,"Nuevo juego", "Boton nuevo juego", "nuevo", "nuevo");
+		EthAppsSystem.Log (this,"Nuevo juego", "Boton nuevo juego", "nuevo", "nuevo");
 		Debug.Log ("newGame");
 		//tiempo de espera
 		SceneHandler.LoadScene("Tutorial");

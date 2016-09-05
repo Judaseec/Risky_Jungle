@@ -28,9 +28,9 @@ public class levelCleared : MonoBehaviour {
 				//Save.SaveGame();
 				//timer
 			Debug.Log(Save.savedGame.level);
-				EthAppsSystem.ChangeStateVariable(this,"nivel",Save.savedGame.level+"");
-
-				Application.LoadLevel (Save.savedGame.level);
+			EthAppsSystem.ChangeStateVariable(this,"nivel",Save.savedGame.level+"");
+			EthAppsSystem.Log (this,"Nivel completado", "nuevo nivel", "nuevo", Save.savedGame.level+"");
+			Application.LoadLevel (Save.savedGame.level);
 		}
 	}
 }

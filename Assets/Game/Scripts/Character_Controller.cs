@@ -177,6 +177,7 @@ public class Character_Controller : MonoBehaviour {
 	*	Si la plataforma es móvil muestra los controles de desplazamiento.
 	*/
 	public void Start () {
+		EthAppsSystem.Log (this,"Nivel completado", "nuevo nivel", "nuevo", Save.savedGame.level+"");
 		animator = GetComponent<Animator>();
 		pausePanel = GameObject.Find("PauseMenuPanel");
 		attackPanel = GameObject.Find("AttackPanel");
@@ -474,6 +475,7 @@ public class Character_Controller : MonoBehaviour {
 	*/
 	public void pause(){
 		isPaused = true;
+		EthAppsSystem.LogScreen (this, "Menu pausa");
 		pausePanel.SetActive (true);
 	}
 
