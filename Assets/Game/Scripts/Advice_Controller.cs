@@ -41,8 +41,9 @@ public class Advice_Controller : MonoBehaviour {
 	public void OnTriggerEnter(Collider hit){
 		//Si el objeto que entra al trigger tiene el tag principal...
 		if (hit.gameObject.tag == "Principal" && !shown) {
-			GameObject.Find("indio").GetComponent<Character_Controller>().run = false;
-			GameObject.Find("indio").GetComponent<Character_Controller>().rightControl = false;
+			GameObject.Find("Character").GetComponent<Character_Controller>().run = false;
+			GameObject.Find("Character").GetComponent<Character_Controller>().rightControl = false;
+			GameObject.Find("Character").GetComponent<Character_Controller>().rightBtnUp();
 			panel.SetActive (true);
 			GameObject.Find("AdviceText").GetComponent<EthText>().textLanguage = "advice"+numAdvice;
 			shown = true;

@@ -20,12 +20,17 @@ public class levelCleared : MonoBehaviour {
 	public void OnTriggerEnter(Collider hit){
 		//Si el objeto que entra al trigger tiene el tag principal...
 		if (hit.gameObject.tag == "Principal") {
-			Save.savedGame.level += 1;
-			//Save.SaveGame();
-			//timer
-			EthAppsSystem.ChangeStateVariable(this,"nivel",(Save.savedGame.level+1)+"");
+			if(Save.savedGame.level < 4){
+				Save.savedGame.level++;
+			} else {
+				Save.savedGame.level = 0;
+			}
+				//Save.SaveGame();
+				//timer
+			Debug.Log(Save.savedGame.level);
+				EthAppsSystem.ChangeStateVariable(this,"nivel",Save.savedGame.level+"");
 
-			Application.LoadLevel (Save.savedGame.level+1);
+				Application.LoadLevel (Save.savedGame.level);
 		}
 	}
 }

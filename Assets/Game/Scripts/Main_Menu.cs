@@ -104,6 +104,7 @@ public class Main_Menu : MonoBehaviour {
 		Debug.Log ("newGame");
 		//tiempo de espera
 		SceneHandler.LoadScene("Tutorial");
+		Save.savedGame.level++;
 	}
 
 	/**

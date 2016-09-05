@@ -24,9 +24,9 @@ public class Water_Controller : MonoBehaviour {
 	{
 		if(hit.gameObject.tag == "Principal")
 		{
-			hit.gameObject.GetComponent<Rigidbody>().useGravity = false;
+			//hit.gameObject.GetComponent<Rigidbody>().useGravity = false;
 			//hit.gameObject.GetComponent<Rigidbody>().mass = 0f;
-			hit.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(2, GetComponent<Rigidbody>().velocity.y + 1, GetComponent<Rigidbody>().velocity.z);
+			//hit.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(2, GetComponent<Rigidbody>().velocity.y + 1, GetComponent<Rigidbody>().velocity.z);
 
 		}
 

@@ -40,7 +40,9 @@ public class Combat_Controller : MonoBehaviour {
 	*	@param Collider hit Collider del enemigo que choca con el del objeto actual.
 	*/
 	public void OnCollisionEnter(Collision hit) {
-		Debug.Log (hit);
+		Debug.Log (hit.gameObject.tag);
+		Debug.Log (hit.gameObject.layer);
+
 		if (hit.gameObject.tag == "Principal") {
 			hitobj = hit;
 			if(this.gameObject.transform.parent.gameObject.tag == "Crocodile"){
@@ -60,6 +62,25 @@ public class Combat_Controller : MonoBehaviour {
 		}
 
 		if (hit.gameObject.tag == "Dart") {
+			if(this.gameObject.transform.parent.gameObject.tag == "Bear"){
+				this.gameObject.transform.parent.gameObject.GetComponent<Bear_Controller>().applyDamage(50);
+				colision=true;
+			}
+			if(this.gameObject.transform.parent.gameObject.tag == "Snake"){
+				this.gameObject.transform.parent.gameObject.GetComponent<Snake_Controller>().applyDamage();
+				colision=true;
+			}
+			if(this.gameObject.transform.parent.gameObject.tag == "Crocodile"){
+				this.gameObject.transform.parent.gameObject.GetComponent<Crocodile_Controller>().applyDamage();
+				colision=true;
+			}
+			if(this.gameObject.transform.parent.gameObject.tag == "Tiger"){
+				this.gameObject.transform.parent.gameObject.GetComponent<Tiger_Controller>().applyDamage(50);
+				colision=true;
+			}
+		}
+
+		if (hit.gameObject.tag == "Spear") {
 			if(this.gameObject.transform.parent.gameObject.tag == "Bear"){
 				this.gameObject.transform.parent.gameObject.GetComponent<Bear_Controller>().applyDamage(50);
 				colision=true;

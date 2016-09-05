@@ -2,6 +2,7 @@
 using System.Collections;
 using Assets.Scripts.com.ethereal.util;
 using Assets.Scripts.com.ethereal.appsSystem;
+using Assets.Scripts.com.ethereal.audio;
 
 /**
 *	@class Character_Controller
@@ -23,9 +24,19 @@ public class Character_Controller : MonoBehaviour {
 	public bool isGrounded = true;
 
 	/**
-	*	@brief Componente transform que s eutiliza para verificar si el personaje está sobre un terreno.
+	*	@brief Componente transform que se utiliza para verificar si el personaje está sobre un terreno.
 	*/
-	public Transform groundChecker;
+	public Transform groundCheckerLeft;
+
+	/**
+	*	@brief Componente transform que se utiliza para verificar si el personaje está sobre un terreno.
+	*/
+	public Transform groundCheckerRigth;
+
+	/**
+	*	@brief GameObject referente al punto de ataque de la lanza.
+	*/
+	public GameObject spearAttack;
 
 	/**
 	*	@brief Radio de detección del ground checker.
@@ -77,6 +88,9 @@ public class Character_Controller : MonoBehaviour {
 	*/
 	private bool attack = false;
 
+	/**
+	*	@brief Variable que guarda la psocion en x inicial de la camara.
+	*/
 	public float xCamInit = 0f;
 
 	/**
@@ -185,8 +199,8 @@ public class Character_Controller : MonoBehaviour {
 	public void FixedUpdate(){
 		//Validaciones para cambiar el estado de las variables de los controles
 		//Validaciones para windows
-
 #if UNITY_STANDALONE || UNITY_WEBPLAYER
+		if(!Eth.IsMobile){
 		//salto
 		if(Input.GetKeyDown (KeyCode.UpArrow)){
 			jumpControl = true;
@@ -222,14 +236,21 @@ public class Character_Controller : MonoBehaviour {
 		}else{
 			attackControl = false;
 		}
+		}
 #elif UNITY_ANDROID
 
 #endif
 		if (life > 0) {
 			GetComponent<Rigidbody> ().AddForce (Physics.gravity * GetComponent<Rigidbody> ().mass);
 
-			Collider[] hitColliders = Physics.OverlapSphere (groundChecker.position, radiusChecker, floorMask);
-			isGrounded = (hitColliders.Length > 0);
+			Collider[] hitColliders = Physics.OverlapSphere (groundCheckerLeft.position, radiusChecker, floorMask);
+			Collider[] hitColliders_2 = Physics.OverlapSphere (groundCheckerRigth.position, radiusChecker, floorMask);
+
+			if((hitColliders.Length > 0) || (hitColliders_2.Length > 0)){	
+				isGrounded = true; 
+			}else{
+				isGrounded = false; 
+			}
 
 			if(xCamInit <= (xCharacter + 3f) && !runBack){
 				GameObject.Find ("Camera").GetComponent<Follow_Character>().enabled = true;
@@ -264,7 +285,9 @@ public class Character_Controller : MonoBehaviour {
 		xCharacter = transform.position.x;
 		if (life > 0) {
 			if (isGrounded && jumpControl && !down && !isPaused) {
-				GetComponent<Rigidbody> ().AddForce (new Vector2 (0, jumpForce));
+				//GetComponent<Rigidbody> ().AddForce (new Vector2 (0, jumpForce));
+				GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, jumpForce, GetComponent<Rigidbody>().velocity.z);
+
 			} else if (isGrounded && jumpControl && down && !isPaused) {
 				animator.Play ("agachado");
 				down = false;
@@ -325,6 +348,9 @@ public class Character_Controller : MonoBehaviour {
 					if (isGrounded && !run && !runBack && !down && !turned && !attack && !isPaused) {
 						attack = true;
 						animator.Play ("ataque_lanza");
+						spearAttack.GetComponent<Collider>().isTrigger = false;
+						EthAudio.GetInstance(null).PlayEffect("Sounds/AttackClip");
+
 						new EthTimer (1500, attackAction);
 					}
 				}
@@ -340,7 +366,20 @@ public class Character_Controller : MonoBehaviour {
 	public void OnCollisionEnter(Collision hit) {
 
 		if(hit.gameObject.tag == "Fall"){
-			new EthTimer(1500, showGameOver);
+			new EthTimer(1000, showGameOver);
+		}
+	}
+
+	/**
+	*	@brief Metodo ejecutado cuando el collider del personaje detecta que esta dentro de otro
+	*	
+	*	@param Collider hit Collider en el que ingresa el personaje.
+	*/
+	public void OnTriggerEnter(Collider hit){
+		//Si el objeto que entra al trigger tiene el tag principal...
+		if (hit.gameObject.tag == "Water") {
+			setLife(0);
+
 		}
 	}
 
@@ -368,6 +407,7 @@ public class Character_Controller : MonoBehaviour {
 	*/
 	public void attackAction(object obj){
 		attack = false;
+		spearAttack.GetComponent<Collider>().isTrigger = true;
 	}
 
 	/**
@@ -499,6 +539,7 @@ public class Character_Controller : MonoBehaviour {
 	*/
 	public void rightBtnUp(){
 		rightControl = false;
+		NotificationCenter.DefaultCenter ().PostNotification (this, "Character_is_not_running");
 	}
 
 	/**

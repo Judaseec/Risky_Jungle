@@ -189,7 +189,2047 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_indio
+        weight: 1
+      - path: arm_indio/base
+        weight: 1
+      - path: arm_indio/base/cintura
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l/faldaLado2_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r/faldaLado2_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1/faldaAdelante2
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1/faldaAtras2
+        weight: 1
+      - path: arm_indio/base/cintura/cadera
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/lanza_0
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l/canilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r/canilla_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/sombrero
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l/antebrazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/codo_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r/antebrazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/codo_r
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_r
+        weight: 1
+      - path: arm_indio/base/controlPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/dedosPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l/talon_l
+        weight: 1
+      - path: arm_indio/base/controlPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/dedosPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r/talon_r
+        weight: 1
+      - path: arm_indio/base/manoIK_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l/dedosA2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l/dedosB2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l/indice2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l/pulgar2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r/dedosA2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r/dedosB2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r/indice2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r/pulgar2_r
+        weight: 1
+      - path: arm_indio/cervatana_0
+        weight: 1
+      - path: cervatana
+        weight: 1
+      - path: lanza
+        weight: 1
+      - path: objetos_personaje
+        weight: 1
+      - path: personaje
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: agachado
+      takeName: agachado
+      firstFrame: -1
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_indio
+        weight: 1
+      - path: arm_indio/base
+        weight: 1
+      - path: arm_indio/base/cintura
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l/faldaLado2_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r/faldaLado2_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1/faldaAdelante2
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1/faldaAtras2
+        weight: 1
+      - path: arm_indio/base/cintura/cadera
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/lanza_0
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l/canilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r/canilla_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/sombrero
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l/antebrazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/codo_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r/antebrazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/codo_r
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_r
+        weight: 1
+      - path: arm_indio/base/controlPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/dedosPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l/talon_l
+        weight: 1
+      - path: arm_indio/base/controlPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/dedosPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r/talon_r
+        weight: 1
+      - path: arm_indio/base/manoIK_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l/dedosA2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l/dedosB2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l/indice2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l/pulgar2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r/dedosA2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r/dedosB2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r/indice2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r/pulgar2_r
+        weight: 1
+      - path: arm_indio/cervatana_0
+        weight: 1
+      - path: cervatana
+        weight: 1
+      - path: lanza
+        weight: 1
+      - path: objetos_personaje
+        weight: 1
+      - path: personaje
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ataque_cerbatana
+      takeName: ataque_cerbatana
+      firstFrame: -1
+      lastFrame: 17
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_indio
+        weight: 1
+      - path: arm_indio/base
+        weight: 1
+      - path: arm_indio/base/cintura
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l/faldaLado2_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r/faldaLado2_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1/faldaAdelante2
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1/faldaAtras2
+        weight: 1
+      - path: arm_indio/base/cintura/cadera
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/lanza_0
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l/canilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r/canilla_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/sombrero
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l/antebrazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/codo_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r/antebrazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/codo_r
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_r
+        weight: 1
+      - path: arm_indio/base/controlPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/dedosPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l/talon_l
+        weight: 1
+      - path: arm_indio/base/controlPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/dedosPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r/talon_r
+        weight: 1
+      - path: arm_indio/base/manoIK_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l/dedosA2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l/dedosB2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l/indice2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l/pulgar2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r/dedosA2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r/dedosB2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r/indice2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r/pulgar2_r
+        weight: 1
+      - path: arm_indio/cervatana_0
+        weight: 1
+      - path: cervatana
+        weight: 1
+      - path: lanza
+        weight: 1
+      - path: objetos_personaje
+        weight: 1
+      - path: personaje
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ataque_lanza
+      takeName: ataque_lanza
+      firstFrame: -1
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_indio
+        weight: 1
+      - path: arm_indio/base
+        weight: 1
+      - path: arm_indio/base/cintura
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l/faldaLado2_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r/faldaLado2_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1/faldaAdelante2
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1/faldaAtras2
+        weight: 1
+      - path: arm_indio/base/cintura/cadera
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/lanza_0
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l/canilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r/canilla_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/sombrero
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l/antebrazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/codo_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r/antebrazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/codo_r
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_r
+        weight: 1
+      - path: arm_indio/base/controlPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/dedosPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l/talon_l
+        weight: 1
+      - path: arm_indio/base/controlPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/dedosPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r/talon_r
+        weight: 1
+      - path: arm_indio/base/manoIK_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l/dedosA2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l/dedosB2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l/indice2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l/pulgar2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r/dedosA2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r/dedosB2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r/indice2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r/pulgar2_r
+        weight: 1
+      - path: arm_indio/cervatana_0
+        weight: 1
+      - path: cervatana
+        weight: 1
+      - path: lanza
+        weight: 1
+      - path: objetos_personaje
+        weight: 1
+      - path: personaje
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: deslizarce
+      takeName: deslizarce
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_indio
+        weight: 1
+      - path: arm_indio/base
+        weight: 1
+      - path: arm_indio/base/cintura
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l/faldaLado2_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r/faldaLado2_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1/faldaAdelante2
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1/faldaAtras2
+        weight: 1
+      - path: arm_indio/base/cintura/cadera
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/lanza_0
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l/canilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r/canilla_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/sombrero
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l/antebrazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/codo_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r/antebrazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/codo_r
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_r
+        weight: 1
+      - path: arm_indio/base/controlPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/dedosPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l/talon_l
+        weight: 1
+      - path: arm_indio/base/controlPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/dedosPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r/talon_r
+        weight: 1
+      - path: arm_indio/base/manoIK_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l/dedosA2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l/dedosB2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l/indice2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l/pulgar2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r/dedosA2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r/dedosB2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r/indice2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r/pulgar2_r
+        weight: 1
+      - path: arm_indio/cervatana_0
+        weight: 1
+      - path: cervatana
+        weight: 1
+      - path: lanza
+        weight: 1
+      - path: objetos_personaje
+        weight: 1
+      - path: personaje
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: disparo_agachado
+      takeName: disparo_agachado
+      firstFrame: -1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_indio
+        weight: 1
+      - path: arm_indio/base
+        weight: 1
+      - path: arm_indio/base/cintura
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l/faldaLado2_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r/faldaLado2_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1/faldaAdelante2
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1/faldaAtras2
+        weight: 1
+      - path: arm_indio/base/cintura/cadera
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/lanza_0
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l/canilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r/canilla_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/sombrero
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l/antebrazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/codo_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r/antebrazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/codo_r
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_r
+        weight: 1
+      - path: arm_indio/base/controlPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/dedosPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l/talon_l
+        weight: 1
+      - path: arm_indio/base/controlPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/dedosPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r/talon_r
+        weight: 1
+      - path: arm_indio/base/manoIK_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l/dedosA2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l/dedosB2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l/indice2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l/pulgar2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r/dedosA2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r/dedosB2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r/indice2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r/pulgar2_r
+        weight: 1
+      - path: arm_indio/cervatana_0
+        weight: 1
+      - path: cervatana
+        weight: 1
+      - path: lanza
+        weight: 1
+      - path: objetos_personaje
+        weight: 1
+      - path: personaje
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: idle
+      takeName: idle
+      firstFrame: -1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_indio
+        weight: 1
+      - path: arm_indio/base
+        weight: 1
+      - path: arm_indio/base/cintura
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l/faldaLado2_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r/faldaLado2_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1/faldaAdelante2
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1/faldaAtras2
+        weight: 1
+      - path: arm_indio/base/cintura/cadera
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/lanza_0
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l/canilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r/canilla_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/sombrero
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l/antebrazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/codo_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r/antebrazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/codo_r
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_r
+        weight: 1
+      - path: arm_indio/base/controlPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/dedosPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l/talon_l
+        weight: 1
+      - path: arm_indio/base/controlPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/dedosPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r/talon_r
+        weight: 1
+      - path: arm_indio/base/manoIK_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l/dedosA2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l/dedosB2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l/indice2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l/pulgar2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r/dedosA2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r/dedosB2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r/indice2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r/pulgar2_r
+        weight: 1
+      - path: arm_indio/cervatana_0
+        weight: 1
+      - path: cervatana
+        weight: 1
+      - path: lanza
+        weight: 1
+      - path: objetos_personaje
+        weight: 1
+      - path: personaje
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: jump
+      takeName: jump
+      firstFrame: -1
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_indio
+        weight: 1
+      - path: arm_indio/base
+        weight: 1
+      - path: arm_indio/base/cintura
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l/faldaLado2_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r/faldaLado2_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1/faldaAdelante2
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1/faldaAtras2
+        weight: 1
+      - path: arm_indio/base/cintura/cadera
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/lanza_0
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l/canilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r/canilla_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/sombrero
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l/antebrazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/codo_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r/antebrazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/codo_r
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_r
+        weight: 1
+      - path: arm_indio/base/controlPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/dedosPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l/talon_l
+        weight: 1
+      - path: arm_indio/base/controlPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/dedosPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r/talon_r
+        weight: 1
+      - path: arm_indio/base/manoIK_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l/dedosA2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l/dedosB2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l/indice2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l/pulgar2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r/dedosA2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r/dedosB2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r/indice2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r/pulgar2_r
+        weight: 1
+      - path: arm_indio/cervatana_0
+        weight: 1
+      - path: cervatana
+        weight: 1
+      - path: lanza
+        weight: 1
+      - path: objetos_personaje
+        weight: 1
+      - path: personaje
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: morir
+      takeName: morir
+      firstFrame: -1
+      lastFrame: 37
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_indio
+        weight: 1
+      - path: arm_indio/base
+        weight: 1
+      - path: arm_indio/base/cintura
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l/faldaLado2_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r/faldaLado2_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1/faldaAdelante2
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1/faldaAtras2
+        weight: 1
+      - path: arm_indio/base/cintura/cadera
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/lanza_0
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l/canilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r/canilla_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/sombrero
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l/antebrazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/codo_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r/antebrazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/codo_r
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_r
+        weight: 1
+      - path: arm_indio/base/controlPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/dedosPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l/talon_l
+        weight: 1
+      - path: arm_indio/base/controlPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/dedosPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r/talon_r
+        weight: 1
+      - path: arm_indio/base/manoIK_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l/dedosA2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l/dedosB2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l/indice2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l/pulgar2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r/dedosA2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r/dedosB2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r/indice2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r/pulgar2_r
+        weight: 1
+      - path: arm_indio/cervatana_0
+        weight: 1
+      - path: cervatana
+        weight: 1
+      - path: lanza
+        weight: 1
+      - path: objetos_personaje
+        weight: 1
+      - path: personaje
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: reset
+      takeName: reset
+      firstFrame: -1
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_indio
+        weight: 1
+      - path: arm_indio/base
+        weight: 1
+      - path: arm_indio/base/cintura
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l/faldaLado2_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r/faldaLado2_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1/faldaAdelante2
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1/faldaAtras2
+        weight: 1
+      - path: arm_indio/base/cintura/cadera
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/lanza_0
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l/canilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r/canilla_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/sombrero
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l/antebrazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/codo_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r/antebrazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/codo_r
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_r
+        weight: 1
+      - path: arm_indio/base/controlPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/dedosPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l/talon_l
+        weight: 1
+      - path: arm_indio/base/controlPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/dedosPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r/talon_r
+        weight: 1
+      - path: arm_indio/base/manoIK_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l/dedosA2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l/dedosB2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l/indice2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l/pulgar2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r/dedosA2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r/dedosB2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r/indice2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r/pulgar2_r
+        weight: 1
+      - path: arm_indio/cervatana_0
+        weight: 1
+      - path: cervatana
+        weight: 1
+      - path: lanza
+        weight: 1
+      - path: objetos_personaje
+        weight: 1
+      - path: personaje
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: run
+      takeName: run
+      firstFrame: -1
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_indio
+        weight: 1
+      - path: arm_indio/base
+        weight: 1
+      - path: arm_indio/base/cintura
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l/faldaLado2_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r/faldaLado2_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1/faldaAdelante2
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1/faldaAtras2
+        weight: 1
+      - path: arm_indio/base/cintura/cadera
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/lanza_0
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l/canilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r/canilla_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/sombrero
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l/antebrazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/codo_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r/antebrazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/codo_r
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_r
+        weight: 1
+      - path: arm_indio/base/controlPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/dedosPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l/talon_l
+        weight: 1
+      - path: arm_indio/base/controlPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/dedosPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r/talon_r
+        weight: 1
+      - path: arm_indio/base/manoIK_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l/dedosA2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l/dedosB2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l/indice2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l/pulgar2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r/dedosA2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r/dedosB2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r/indice2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r/pulgar2_r
+        weight: 1
+      - path: arm_indio/cervatana_0
+        weight: 1
+      - path: cervatana
+        weight: 1
+      - path: lanza
+        weight: 1
+      - path: objetos_personaje
+        weight: 1
+      - path: personaje
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: subir_cuerda
+      takeName: subir_cuerda
+      firstFrame: -1
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_indio
+        weight: 1
+      - path: arm_indio/base
+        weight: 1
+      - path: arm_indio/base/cintura
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_l/faldaLado1_l/faldaLado2_l
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFalda_r/faldaLado1_r/faldaLado2_r
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAdelante/faldaAdelante1/faldaAdelante2
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1
+        weight: 1
+      - path: arm_indio/base/cintura/apoyoFaldaAtras/faldaAtras1/faldaAtras2
+        weight: 1
+      - path: arm_indio/base/cintura/cadera
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/lanza_0
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_l/canilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r
+        weight: 1
+      - path: arm_indio/base/cintura/cadera/muslo_r/canilla_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_2
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/pluma_3
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/cuello/cabeza/sombrero
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/brazoIK_l/antebrazoIK_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_l/codo_l
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/brazoIK_r/antebrazoIK_r
+        weight: 1
+      - path: arm_indio/base/cintura/espalda1/espalda2/espalda3/hombro_r/codo_r
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_l
+        weight: 1
+      - path: arm_indio/base/cintura/rodilla_r
+        weight: 1
+      - path: arm_indio/base/controlPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/dedosPie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l
+        weight: 1
+      - path: arm_indio/base/controlPie_l/pie_l/talon_l
+        weight: 1
+      - path: arm_indio/base/controlPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/dedosPie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r
+        weight: 1
+      - path: arm_indio/base/controlPie_r/pie_r/talon_r
+        weight: 1
+      - path: arm_indio/base/manoIK_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosA1_l/dedosA2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/dedosB1_l/dedosB2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/indice1_l/indice2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l
+        weight: 1
+      - path: arm_indio/base/manoIK_l/pulgar1_l/pulgar2_l
+        weight: 1
+      - path: arm_indio/base/manoIK_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosA1_r/dedosA2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/dedosB1_r/dedosB2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/indice1_r/indice2_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r
+        weight: 1
+      - path: arm_indio/base/manoIK_r/pulgar1_r/pulgar2_r
+        weight: 1
+      - path: arm_indio/cervatana_0
+        weight: 1
+      - path: cervatana
+        weight: 1
+      - path: lanza
+        weight: 1
+      - path: objetos_personaje
+        weight: 1
+      - path: personaje
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
