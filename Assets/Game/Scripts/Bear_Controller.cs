@@ -63,7 +63,7 @@ public class Bear_Controller : MonoBehaviour {
 		//Si el objeto que entra al trigger tiene el tag principal...
 		if (hit.gameObject.tag == "Principal") {
 			inside=true;
-			effect = EthAudio.GetInstance(null).PlayEffectRepeated("Sounds/SnakeClip");
+			effect = EthAudio.GetInstance(null).PlayEffectRepeated("Sounds/BearClip");
 		}
 	}
 	

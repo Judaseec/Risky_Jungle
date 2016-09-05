@@ -170,4 +170,8 @@ public class Main_Menu : MonoBehaviour {
 	public void setSystemReady(bool obj){
 		isSystemReady = true;
 	}
+
+	public void continueLastLevel(){
+		Application.LoadLevel (Save.savedGame.level);
+	}
 }
