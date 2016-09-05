@@ -63,7 +63,7 @@ public class Combat_Controller : MonoBehaviour {
 
 		if (hit.gameObject.tag == "Dart") {
 			if(this.gameObject.transform.parent.gameObject.tag == "Bear"){
-				this.gameObject.transform.parent.gameObject.GetComponent<Bear_Controller>().applyDamage(50);
+				this.gameObject.transform.parent.gameObject.GetComponent<Bear_Controller>().applyDamage(5);
 				colision=true;
 			}
 			if(this.gameObject.transform.parent.gameObject.tag == "Snake"){
@@ -75,7 +75,7 @@ public class Combat_Controller : MonoBehaviour {
 				colision=true;
 			}
 			if(this.gameObject.transform.parent.gameObject.tag == "Tiger"){
-				this.gameObject.transform.parent.gameObject.GetComponent<Tiger_Controller>().applyDamage(50);
+				this.gameObject.transform.parent.gameObject.GetComponent<Tiger_Controller>().applyDamage(5);
 				colision=true;
 			}
 		}
