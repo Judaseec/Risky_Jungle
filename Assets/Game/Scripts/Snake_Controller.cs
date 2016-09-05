@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts.com.ethereal.audio;
 
 /**
 *	@class Snake_Controller
@@ -19,6 +20,11 @@ public class Snake_Controller : MonoBehaviour {
 	*	@brief Variable que indica si hay un gameObject en el area del collider.
 	*/
 	public bool inside = false;
+
+	/**
+	*	@brief Variable para guardar el efecto ciclico y poder eliminarlo despues.
+	*/
+	private Object effect;
 	
 	/**
 	*	@brief Método que se ejecuta una vez por frame, el cual controla las animaciones y la muerte de la serpiente.
@@ -47,6 +53,7 @@ public class Snake_Controller : MonoBehaviour {
 		//Si el objeto que entra al trigger tiene el tag principal...
 		if (hit.gameObject.tag == "Principal") {
 			inside=true;
+			effect = EthAudio.GetInstance(null).PlayEffectRepeated("Sounds/SnakeClip");
 		}
 	}
 	
@@ -59,6 +66,7 @@ public class Snake_Controller : MonoBehaviour {
 		//Si el objeto que sale del trigger tiene el tag principal...
 		if (hit.gameObject.tag == "Principal") {
 			inside=false;
+			EthAudio.GetInstance(null).RemoveEffect(effect);
 		}
 	}
 

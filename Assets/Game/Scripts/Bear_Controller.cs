@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts.com.ethereal.audio;
 
 /**
 *	@class Bear_Controller
@@ -25,6 +26,10 @@ public class Bear_Controller : MonoBehaviour {
 	*/
 	public bool inside = false;
 
+	/**
+	*	@brief Variable para guardar el efecto ciclico y poder eliminarlo despues.
+	*/
+	private Object effect;
 	
 	/**
 	*	@brief Método que se ejecuta una vez por frame, el cual controla las animaciones y la muerte del oso.
@@ -58,6 +63,7 @@ public class Bear_Controller : MonoBehaviour {
 		//Si el objeto que entra al trigger tiene el tag principal...
 		if (hit.gameObject.tag == "Principal") {
 			inside=true;
+			effect = EthAudio.GetInstance(null).PlayEffectRepeated("Sounds/SnakeClip");
 		}
 	}
 	
@@ -70,6 +76,7 @@ public class Bear_Controller : MonoBehaviour {
 		//Si el objeto que sale del trigger tiene el tag principal...
 		if (hit.gameObject.tag == "Principal") {
 			inside=false;
+			EthAudio.GetInstance(null).RemoveEffect(effect);
 		}
 	}
 

@@ -358,13 +358,13 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="IFacebook">
- <HintPath>D:/Julian/Trabajo de Grado/Repositorio/Risky_Jungle/Risky_Jungle/Assets/Facebook/Scripts/IFacebook.dll</HintPath>
+ <HintPath>D:/Unity 3D/Proyectos/Risky_Jungle/Assets/Facebook/Scripts/IFacebook.dll</HintPath>
  </Reference>
  <Reference Include="P31RestKit">
- <HintPath>D:/Julian/Trabajo de Grado/Repositorio/Risky_Jungle/Risky_Jungle/Assets/Plugins/P31RestKit.dll</HintPath>
+ <HintPath>D:/Unity 3D/Proyectos/Risky_Jungle/Assets/Plugins/P31RestKit.dll</HintPath>
  </Reference>
  <Reference Include="UTNotifications">
- <HintPath>D:/Julian/Trabajo de Grado/Repositorio/Risky_Jungle/Risky_Jungle/Assets/Plugins/UTNotifications.dll</HintPath>
+ <HintPath>D:/Unity 3D/Proyectos/Risky_Jungle/Assets/Plugins/UTNotifications.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

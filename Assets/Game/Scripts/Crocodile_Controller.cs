@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Assets.Scripts.com.ethereal.util;
+using Assets.Scripts.com.ethereal.audio;
 
 /**
 *	@class Crocodile_Controller
@@ -60,6 +61,7 @@ public class Crocodile_Controller : MonoBehaviour {
 		//Si el objeto que entra al trigger tiene el tag principal...
 		if (hit.gameObject.tag == "Principal") {
 			inside=true;
+			EthAudio.GetInstance(null).PlayEffect("Sounds/CrocodileClip");
 		}
 	}
 	

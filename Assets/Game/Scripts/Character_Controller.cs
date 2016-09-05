@@ -489,7 +489,7 @@ public class Character_Controller : MonoBehaviour {
 	* 	@breaf Método para reiniciar el nivel.
 	*/
 	public void restart(){
-		Application.LoadLevel (Save.savedGame.level+1);
+		Application.LoadLevel (Save.savedGame.level);
 	}
 
 	/**

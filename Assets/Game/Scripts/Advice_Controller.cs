@@ -30,7 +30,7 @@ public class Advice_Controller : MonoBehaviour {
 	*/
 	public void Start(){
 		panel = GameObject.Find("Advice");
-		//panel.SetActive (false);
+		GameObject.Find("AdviceText").GetComponent<EthText>().textLanguage = "advice1";
 	}
 
 	/**
